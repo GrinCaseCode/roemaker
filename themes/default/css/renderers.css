@@ -1,0 +1,216 @@
+// Backgrounds colors
+primaryBGColor=#252E37
+secondaryBGColor=#131E28
+middleBGColor=#1C262F
+disabledBGColor=#535C65
+
+// Text colors
+primaryTextColor=#BAC7D7
+secondaryTextColor=#6E7780
+activeTextColor=#FFFFFF
+accentTextColor=#6EDEFA
+disabledTextColor=#6E7780
+
+// General colors
+blueColor=#00566C
+redColor=#FB5757
+yellowColor=#FFF40D
+greenColor=#00B259
+greenHoverColor=#32DB87
+accentColor=#00566C
+accentHoverColor=#0782A0
+
+// Buy&Sell colors
+buyColor=#37DBBA
+buyColorHover=#7AFFE4
+buyColorActive=#51C2AB
+buyTextColor=#131E28
+sellColor=#EB602F
+sellColorHover=#FF9B78
+sellColorActive=#C74A1E
+sellTextColor=#131E28
+
+// Connections statuses
+statusWarningColor=#FFEA5B
+statusActiveColor=#1EBB2C
+
+
+
+
+
+// window
+Window_BackgroundColor=#131E28
+WindowNoBrowser_BackgroundColor=#131E28
+Window_BorderExternalColor=#131E28
+Window_BorderExternalFocusedColor=#00566C
+Window_BorderInternalColor=#252E37
+
+// window caption
+WindowCaption_BackgroundColor=#252e37
+WindowCaption_ForeColor=#bac7d7
+WindowCaption_ForeFocusedColor=#ffffff
+
+// window toolbar
+WindowToolbar_BackgroundColor=#252e37
+
+// buttons
+Button_BackGroundColorNormalState=#252e37
+Button_BackGroundColorHoverState=#252e37
+Button_BackGroundColorClickedState=#0782a0
+Button_BackGroundColorDisabled=#1c262f
+                
+Button_BorderColorNormalState=#252e37
+Button_BorderColorHoverlState=#535c65
+Button_BorderColorDisabledState=#1c262f
+Button_BorderColorClickedState=#0782a0
+Button_BorderColorActiveState=#6edefa
+
+Button_ForeColor=#bac7d7
+Button_ForeColorDisabled=#535c65
+Button_ForeColorHovered=#ffffff
+Button_ForeColorClicked=#ffffff
+Button_ForeColorActive=#32db87
+
+// inputs
+Input_BackGroundColorNormalState=#131e28
+Input_BackGroundColorHoverState=#131e28
+Input_BackGroundColorClickedState=#131e28
+Input_BackGroundColorDisabled=#1c262f
+
+Input_BorderColorNormalState=#131e28
+Input_BorderColorHoverlState=#535c65
+Input_BorderColorDisabledState=#1c262f
+Input_BorderColorClickedState=#00566c
+
+Input_ForeColor=#bac7d7
+Input_ForeColorDisabled=#535c65
+Input_ForeColorHovered=#ffffff
+Input_ForeColorClicked=#ffffff
+Input_ForeColorSecondary=#535c65
+
+// table
+TableHeaderBackColor=#252e37
+TableHeaderForeColor=#8596a7
+TableBackcolor=#131e28
+TableGridColor=#252e37
+TableRowBackColor=#131e28
+TableHeaderGridColor=#1b242d
+TableSelectionBackColor=#00566c
+TableSelectionForeColor=#6edefa
+TableGroupForeColor=#6edefa
+TableGroupForeColorHover=#ffffff
+TableGroupBackColor=#131e28
+TableGroupBackColorHover=#1c262f
+TableColumnResizeColor=#00566c
+
+// tree
+Tree_BackColor=#131e28
+Tree_TextColor=#b9c6d5
+Tree_TextSelectColor=#ffffff
+Tree_Selection_Fill=#1c262f 
+Tree_InstrumentDescriptionColor=#535c65
+
+// level1bar
+Level1Bar_RoundRectBackColor=#1a242c
+Level1Bar_RoundRectBorderColor=#1a242c
+Level1Bar_ChangeUpForeColor=#37dbba
+Level1Bar_ChangeDownForeColor=#fb5757
+Level1Bar_ItemHeaderForeColor=#535c65
+Level1Bar_ItemValueForeColor=#bac7d7
+Level1Bar_SeparatorColor=#1e2e37
+
+// market depth
+MarketDepth_Layer0_BackColor=#652900
+MarketDepth_Layer0_ForeColor=#BAC7D7
+MarketDepth_Layer0_SeparatorColor=#57270D
+MarketDepth_Layer1_BackColor=#572300
+MarketDepth_Layer1_ForeColor=#BAC7D7
+MarketDepth_Layer1_SeparatorColor=#47210B
+MarketDepth_Layer2_BackColor=#461C00
+MarketDepth_Layer2_ForeColor=#BAC7D7
+MarketDepth_Layer2_SeparatorColor=#3A1C09
+MarketDepth_Layer3_BackColor=#321400
+MarketDepth_Layer3_ForeColor=#BAC7D7
+MarketDepth_Layer3_SeparatorColor=#251506
+MarketDepth_Layer4_BackColor=#200D00
+MarketDepth_Layer4_ForeColor=#BAC7D7
+MarketDepth_Layer4_SeparatorColor=#190F04
+
+// splitter
+Splitter_BackColor=#252E37
+
+// chart
+Chart_BackColor=#131E28
+Chart_BottomColor=#131E28
+Chart_TopColor=#131E28
+Chart_TrackCursorPriceColor=#4A4700
+Chart_TrackCursorPriceFontColor=#ffffff
+Chart_TrackCursorTimeColor=#4A4700
+Chart_TrackCursorTimeFontColor=#ffffff
+Chart_PriceScaleAxisColor=#1C262F
+Chart_PriceScaleBackColor=#131E28
+Chart_PriceScaleTextColor=#535C65
+Chart_TimeScaleAxisColor=#1C262F
+Chart_TimeScaleBackColor=#131E28
+Chart_TimeScaleTextColor=#535C65
+Chart_GridPriceColor=#1C262F
+Chart_GridTimeColor=#1C262F
+Chart_BarsUpColor=#09EABC
+Chart_BarsDownColor=#EB602F
+Chart_BarsUpBorderColor=#09EABC
+Chart_BarsDownBorderColor=#EB602F
+Chart_WickUpBorderColor=#09EABC
+Chart_WickDownBorderColor=#EB602F
+Chart_BarsHiLowColor=#ffffff
+Chart_SolidPriceColor=#09EABC
+Chart_BarsForestColor=#09EABC
+Chart_VolumeFixedColor=#535C65
+Chart_VolumeUpColor=#1c5400
+Chart_VolumeDownColor=#5c0018
+Chart_VolumeBarFontColor=#d1d1d1
+Chart_DaySeparateColor=#004D43
+Chart_WeekSeparateColor=#004D43
+Chart_MonthSeparateColor=#004D43
+Chart_YearSeparateColor=#004D43
+Chart_TextSeparateColor=#FFFFFF
+Chart_InfoWindowBackColor=25,4,16,28
+Chart_InfoWindowForeColor=#BAC7D7
+Chart_BilletForeColor=#00566C
+Chart_TextToolForeColor=#ffffff
+Chart_TextToolBackColor=#2a2a2a
+Chart_BilletBackColor=25,4,16,28
+Chart_ToolsDefaultColor=#628fff
+Chart_ToolsSelectionColor=#32ffff
+Chart_IndicatorBack=#181818
+Chart_IndicatorHover=#62b7ff
+Chart_IndicatorLineHover=#62b7ff
+Chart_IndicatorFore=#666666
+Chart_IndicatorForeHover=#ffffff
+Chart_LoadIndicatorColor=#cc4444
+Chart_LoadIndicatorForeColor=#bebebe
+Chart_DefaultPlateColor=#333333
+Chart_HoverPlateColor=#062d56
+Chart_SelectedPlateColor=#0b82e8
+Chart_DeviderButtonsColor=#010101
+Chart_SelectedPlatePenColor=#000001
+Chart_BorderPanelColor=#333333
+Chart_ScrollBack=#000000
+Chart_TimeToNextBar=#c0c0c0
+Chart_HighLow=#50b4aa
+Chart_lastPrice_LastIndicatorColor=#808080
+Chart_ToolSelectorRectBrushColor=#64f0f0
+Chart_ToolSelectorRectPenColor=#d3d3d3
+Chart_ScrollerBorderColor=#000000
+Chart_WindowContainerHeaderBackColor=#181818
+Chart_SpreadIncorrectBackColor=#28eb00
+Chart_PreviewRendererBorderColor=#007ddc
+Chart_PreviewRendererTextColor=#787878
+Chart_VolumeBars_MovingAverageColor=#62b7ff
+Chart_DotsColor=#09EABC
+
+// visualtrading
+VisualTradingBuyColor=55, 219, 186
+VisualTradingSellColor=235, 96, 47
+VisualTradingBuyColorHover=12, 87, 107
+VisualTradingSellColorHover=119, 48, 50
+VisualTradingTextColor=0,0,0
