@@ -1,0 +1,39 @@
+<svg width="40" height="40" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo_start</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-14287 -7222)">
+<g id="logo_start">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Ellipse 3">
+<use xlink:href="#path0_fill" transform="translate(14287 7222)" fill="#C4C4C4"/>
+</g>
+</mask>
+<g id="Group" mask="url(#mask0_alpha)">
+<g id="Icon">
+<use xlink:href="#path1_fill" transform="translate(14295.8 7226)" fill="#6F7B87"/>
+<use xlink:href="#path2_fill" transform="translate(14295.8 7226)" fill="#6F7B87"/>
+<use xlink:href="#path3_fill" transform="translate(14295.8 7226)" fill="#6F7B87"/>
+<use xlink:href="#path4_fill" transform="translate(14295.8 7226)" fill="#6F7B87"/>
+<use xlink:href="#path5_fill" transform="translate(14295.8 7226)" fill="#6F7B87"/>
+</g>
+<g id="Ellipse 3">
+<mask id="mask1_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(14287 7222)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(14287 7222)" fill="#6F7B87"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 40 20C 40 31.0457 31.0457 40 20 40C 8.9543 40 0 31.0457 0 20C 0 8.9543 8.9543 0 20 0C 31.0457 0 40 8.9543 40 20Z"/>
+<path id="path1_fill" d="M 11.2031 0L 19.2178 3.45459L 19.2178 6.25456L 11.2031 3.09098L 3.49414 6.25456L 3.49414 3.45459L 11.2031 0Z"/>
+<path id="path2_fill" d="M 22.3291 9.30908L 11.2018 4.98177L 0.00195312 9.30908L 0.00195312 12L 11.2018 8.10905L 22.3291 12L 22.3291 9.30908Z"/>
+<path id="path3_fill" d="M 22.3291 13.7454L 11.2018 10L 0.00195312 13.7454L 0.00195312 19.4546L 7.85645 17.4909L 7.85645 34.909L 11.2021 35L 14.4017 34.8727L 14.4017 17.4909L 22.3291 19.4546L 22.3291 13.7454Z"/>
+<path id="path4_fill" d="M 5.74707 20.2544L 0.0016276 21.4544L 0 31.8511L 5.74707 33.8511L 5.74707 20.2544Z"/>
+<path id="path5_fill" d="M 22.3285 21.4544L 16.583 20.2544L 16.583 33.8511L 22.3301 31.8511L 22.3285 21.4544Z"/>
+<path id="path6_stroke_2x" d="M 38.6 20C 38.6 30.2725 30.2725 38.6 20 38.6L 20 41.4C 31.8189 41.4 41.4 31.8189 41.4 20L 38.6 20ZM 20 38.6C 9.7275 38.6 1.4 30.2725 1.4 20L -1.4 20C -1.4 31.8189 8.18111 41.4 20 41.4L 20 38.6ZM 1.4 20C 1.4 9.7275 9.7275 1.4 20 1.4L 20 -1.4C 8.18111 -1.4 -1.4 8.18111 -1.4 20L 1.4 20ZM 20 1.4C 30.2725 1.4 38.6 9.7275 38.6 20L 41.4 20C 41.4 8.18111 31.8189 -1.4 20 -1.4L 20 1.4Z"/>
+</defs>
+</svg>

@@ -1,0 +1,272 @@
+.blueColor {
+    color: #6edefa;
+  }
+  .redColor {
+    color: #fb5757;
+  }
+  .greenColor {
+    color: #1ebb2c;
+  }
+  .yellowColor {
+    color: #fff40d;
+  }
+  .link1 {
+    color: #FB5757!important;
+  }
+  .link2 {
+    color: #FFF40D!important;
+  }
+  .link3 {
+    color: #1EBB2C!important;
+  }
+  .link4 {
+    color: #78C4FF!important;
+  }
+  .link5 {
+    color: #E37DFF!important;
+  }
+  .linkBack1 {
+    background-color: #FB5757!important;
+  }
+  .linkBack2 {
+    background-color: #FFF40D!important;
+  }
+  .linkBack3 {
+    background-color: #1EBB2C!important;
+  }
+  .linkBack4 {
+    background-color: #78C4FF!important;
+  }
+  .linkBack5 {
+    background-color: #E37DFF!important;
+  }
+  * {
+    position: relative;
+    box-sizing: border-box;
+  }
+  startingPanel {
+    width: 479px;
+    height: 614px;
+    overflow: hidden;
+    float: left;
+    border: 2px solid #00566c;
+    border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  startingPanel panelHeader {
+    width: 100%;
+    height: 50px;
+    float: left;
+    background-color: #131e28;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  startingPanel panelBody {
+    width: 100%;
+    height: auto;
+    background-color: #252e37;
+    float: left;
+    overflow: overlay;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+  }
+  startingPanel panelBody.withoutHead {
+    position: absolute;
+    top: 0;
+  }
+  startingPanel panelFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    float: left;
+    height: 50px;
+    clear: both;
+    padding: 10px 20px;
+    background-color: #131e28;
+  }
+  startingPanel panelFooter text {
+    line-height: 30px;
+    height: 30px;
+    font-size: 11px;
+    color: #535c65;
+    vertical-align: middle;
+  }
+  startingPanel panelFooter text > * {
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+  }
+  startingPanel panelFooter text devider {
+    width: 1px;
+    height: 20px;
+    background-color: #252e37;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  startingPanel tabLabels {
+    float: left;
+    width: 100%;
+    height: 50px;
+  }
+  startingPanel tabLabels tabLabel {
+    width: 50px;
+    height: 50px;
+    display: block;
+    float: left;
+    border-bottom: 1px solid transparent;
+  }
+  startingPanel tabLabels tabLabel icon {
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    color: #535c65;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+  }
+  startingPanel tabLabels tabLabel:hover icon {
+    color: #0782a0;
+  }
+  startingPanel tabLabels tabLabel.active {
+    border-bottom: 1px solid #0782a0;
+  }
+  startingPanel tabLabels tabLabel.active icon {
+    color: #0782a0;
+  }
+  startingPanel panelsGroup {
+    float: left;
+    width: 100%;
+  }
+  startingPanel panelsGroup:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #1c262f;
+    z-index: 5;
+  }
+  startingPanel panelsGroup.open groupBody {
+    max-height: 520px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  startingPanel panelsGroup.open groupTitle controls icon.dropDown {
+    transform: rotate(0);
+  }
+  startingPanel panelsGroup.open groupTitle:hover controls icon {
+    transform: rotate(-45deg);
+  }
+  startingPanel panelsGroup groupTitle {
+    width: 100%;
+    float: left;
+    height: 45px;
+    padding: 0 20px 0 20px;
+  }
+  startingPanel panelsGroup groupTitle:hover name {
+    color: #ffffff;
+  }
+  startingPanel panelsGroup groupTitle:hover controls icon {
+    color: #0782a0;
+    transform: rotate(-45deg);
+  }
+  startingPanel panelsGroup groupTitle name {
+    float: left;
+    font-size: 12px;
+    line-height: 45px;
+    color: #bac7d7;
+    font-weight: bold;
+    transition: .3s;
+  }
+  startingPanel panelsGroup groupTitle controls {
+    float: left;
+    line-height: 45px;
+    vertical-align: middle;
+    position: absolute;
+    left: -5px;
+    top: -1px;
+  }
+  startingPanel panelsGroup groupTitle controls icon {
+    float: none;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-90deg);
+  }
+  startingPanel panelsGroup groupBody {
+    max-height: 0;
+    overflow: hidden;
+    float: left;
+    transition: .2s;
+    padding: 0 0 0 20px;
+  }
+  startingPanel.in {
+    backface-visibility: visible !important;
+    animation-name: flipBottom;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+  }
+  startingPanel.out {
+    backface-visibility: visible !important;
+    animation-name: reverse;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+  }
+  @keyframes reverse {
+    0% {
+      transform-style: preserve-3d;
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform-style: preserve-3d;
+      transform: scale(0.95);
+      opacity: 0;
+    }
+  }
+  @keyframes flipBottom {
+    0% {
+      transform-style: preserve-3d;
+      transform: perspective(600px) rotateX(-3deg) scale(0.9);
+      transform-origin: 50% 0;
+      top: -10%;
+      opacity: 0;
+    }
+    60% {
+      transform-style: preserve-3d;
+      transform: perspective(600px) rotateX(-2deg);
+      transform-origin: 50% 0;
+    }
+    75% {
+      transform-style: preserve-3d;
+      transform: perspective(600px) rotateX(-1deg);
+      transform-origin: 50% 0;
+      top: 0;
+    }
+    100% {
+      transform-style: preserve-3d;
+      transform: perspective(600px) rotateX(0deg) scale(1);
+      transform-origin: 50% 0;
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  searchResults {
+    height: 100vh;
+    max-height: 100vh;
+  }

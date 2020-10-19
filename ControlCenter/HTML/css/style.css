@@ -1,0 +1,819 @@
+startBar {
+    box-sizing: border-box;
+    background-color: #252e37;
+    height: 65px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 2px solid #252e37;
+    overflow: hidden;
+    position: absolute;
+    animation-name: drop;
+    animation-duration: .5s;
+    display: flex;
+    justify-content: space-between
+}
+
+startBar logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: auto;
+    height: 50px;
+    max-height: 50px;
+    margin: 0;
+    line-height: 50px;
+    transition: .3s;
+    position: relative;
+    overflow: hidden
+}
+
+startBar logo:hover {
+    background-color: #131e28
+}
+
+startBar logo.active,
+startBar logo:active {
+    background-color: #1c262f
+}
+
+startBar logo.update .updateLabel {
+    display: block
+}
+
+startBar logo div.mainLogo {
+    display: block;
+    width: 50px;
+    background: url(../images/mainLogo.png) center no-repeat;
+    height: 50px
+}
+
+startBar logo div.updateLabel {
+    display: none;
+    position: absolute;
+    background: url(../images/upgradeIcon.png) center no-repeat;
+    left: 2px;
+    top: 2px;
+    height: 24px;
+    width: 24px;
+    animation-name: managerBlink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+}
+
+startBar fleft {
+    overflow: hidden;
+    display: block;
+    flex-grow: 0
+}
+
+startBar middle {
+    overflow: hidden;
+    display: block;
+    flex-grow: 2;
+    position: relative
+}
+
+startBar middle .tickersTape {
+    background-color: #131e28;
+    height: 40px;
+    overflow: hidden;
+    color: #bac7d7;
+    white-space: nowrap;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px
+}
+
+startBar middle .tickersTape .tapeInner {
+    display: block;
+    position: absolute
+}
+
+startBar middle .tickersTape .tapeInner.animate {
+    animation: marquee 10s linear infinite
+}
+
+startBar middle .tickersTape .tapeInner:hover {
+    animation-play-state: paused
+}
+
+startBar middle .tickersTape .tapeInner>span {
+    float: left;
+    width: max-content
+}
+
+@keyframes marquee {
+    0% {
+        left: 0
+    }
+
+    100% {
+        left: -100%
+    }
+}
+
+startBar middle .tickersTape .tickerItem {
+    display: inline-block;
+    margin: 5px 0 5px 10px;
+    border-right: 1px solid #252e37;
+    font-size: 12px;
+    padding-right: 10px
+}
+
+startBar middle .tickersTape .tickerItem .tName {
+    float: left;
+    padding-right: 5px;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 600;
+    color: #bac7d7
+}
+
+startBar middle .tickersTape .tickerItem .tChange {
+    font-size: 11px;
+    float: right;
+    line-height: 15px;
+    font-weight: 600
+}
+
+startBar middle .tickersTape .tickerItem .tChange.red {
+    color: #fb5757
+}
+
+startBar middle .tickersTape .tickerItem .tChange.green {
+    color: #00b259
+}
+
+startBar middle .tickersTape .tickerItem .tPrice {
+    width: 100%;
+    clear: both;
+    float: left;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    line-height: 15px
+}
+
+startBar fright {
+    overflow: hidden;
+    display: block;
+    flex-grow: 0
+}
+
+startBar searchField {
+    float: left;
+    display: block;
+    padding-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+startBar favorites {
+    display: block;
+    float: left;
+    margin-left: 5px
+}
+
+startBar favorites hider {
+    width: 30px;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    margin-top: 10px
+}
+
+startBar favorites hider:hover {
+    background-color: #00566c
+}
+
+startBar favorites hider:hover icon {
+    color: #fff
+}
+
+startBar favorites hider.active,
+startBar favorites hider:active {
+    background-color: #0782a0
+}
+
+startBar favorites hider.active icon,
+startBar favorites hider:active icon {
+    color: #fff
+}
+
+startBar favorites hider icon {
+    font-size: 20px;
+    color: #bac7d7
+}
+
+startBar favorites item {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    transition: all .3s;
+    position: relative
+}
+
+startBar favorites item:hover {
+    background-color: #131e28
+}
+
+startBar favorites item img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+startBar connections {
+    display: block;
+    float: left
+}
+
+startBar connections item {
+    display: block;
+    box-sizing: border-box;
+    background-color: #252e37;
+    float: left;
+    max-width: 160px;
+    overflow: hidden;
+    height: 50px;
+    color: #bac7d7;
+    position: relative;
+    padding: 14px 0;
+    transition: .3s
+}
+
+startBar connections item:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    bottom: 0;
+    opacity: 1;
+    background: -webkit-linear-gradient(left, rgba(37, 46, 55, 0) 0, #252e37 100%);
+    transition: opacity .1s
+}
+
+startBar connections item:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    background: -webkit-linear-gradient(left, rgba(19, 30, 40, 0) 0, #131e28 100%);
+    transition: opacity .1s
+}
+
+startBar connections item:hover {
+    background-color: #131e28
+}
+
+startBar connections item:hover name {
+    color: #6edefa
+}
+
+startBar connections item:hover:after {
+    opacity: 0
+}
+
+startBar connections item:hover:before {
+    opacity: 1
+}
+
+startBar connections item.out {
+    max-width: 0;
+    min-width: 0
+}
+
+startBar connections item name {
+    display: block;
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 20px;
+    margin-right: 15px
+}
+
+startBar connections item name status {
+    display: block;
+    position: absolute;
+    left: -12px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    top: 4px;
+    transition: background-color 1s
+}
+
+startBar connections item name status.disconnected {
+    background-color: #3e4954
+}
+
+startBar connections item name status.active {
+    background-color: #1ebb2c;
+    animation-name: blinkTwo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+startBar connections item name status.warning {
+    background-color: #ffea5b;
+    animation-name: blinkTwo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+startBar connections item name status.error {
+    background-color: #fb5757
+}
+
+startBar connections item name status.connecting {
+    animation-name: blink;
+    animation-duration: .8s;
+    animation-iteration-count: infinite
+}
+
+startBar connections item ping {
+    margin-left: 20px;
+    margin-right: 15px;
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap
+}
+
+startBar connections item ping.disconnected {
+    color: #6e7780
+}
+
+startBar connections holder {
+    display: none
+}
+
+startBar connections.mini {
+    position: relative
+}
+
+startBar connections.mini.open holder {
+    background-color: #131e28
+}
+
+startBar connections.mini.open items {
+    display: block
+}
+
+startBar connections.mini items {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none
+}
+
+startBar connections.mini item {
+    width: 100%;
+    max-width: unset;
+    padding: 15px 20px 15px 40px;
+    background-color: #131e28
+}
+
+startBar connections.mini item:after {
+    background-image: linear-gradient(270deg, #131e28 .55%, #131e28 49.72%, rgba(37, 46, 55, 0) 100%)
+}
+
+startBar connections.mini item:hover {
+    background-color: #252e37
+}
+
+startBar connections.mini item:hover:after {
+    background-image: linear-gradient(270deg, #252e37 .55%, #252e37 49.72%, rgba(37, 46, 55, 0) 100%)
+}
+
+startBar connections.mini holder {
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    background-color: #252e37
+}
+
+startBar connections.mini holder:hover {
+    background-color: #131e28
+}
+
+startBar connections.mini holder icon {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-image: url(../images/link.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px
+}
+
+startBar connections.mini holder name {
+    color: #6e7780;
+    font-size: 12px
+}
+
+startBar controls {
+    display: block;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #bac7d7
+}
+
+startBar controls icon {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    position: relative;
+    color: #bac7d7
+}
+
+startBar controls icon.managerIcon:hover icon {
+    color: #6edefa
+}
+
+startBar controls icon.managerIcon.disconnected icon.manager {
+    color: #bac7d7
+}
+
+startBar controls icon.managerIcon.disconnected:hover icon.manager {
+    color: #6edefa
+}
+
+startBar controls icon.managerIcon.active {
+    background-color: #252e37
+}
+
+startBar controls icon.managerIcon.active:hover {
+    background-color: #131e28
+}
+
+startBar controls icon.managerIcon.active icon.manager {
+    color: #1ebb2c
+}
+
+startBar controls icon.managerIcon.active icon:first-child {
+    animation-name: managerBlink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+startBar controls icon.managerIcon.active icon:last-child {
+    animation-name: managerBlink;
+    animation-delay: .2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+startBar controls icon.managerIcon.warning icon.manager {
+    color: #ffea5b
+}
+
+startBar controls icon.managerIcon.warning icon:first-child {
+    animation-name: managerBlink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+startBar controls icon.managerIcon.warning icon:last-child {
+    animation-name: managerBlink;
+    animation-delay: .2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+startBar controls icon.managerIcon.connecting icon.manager {
+    color: #3e4954
+}
+
+startBar controls icon.managerIcon.connecting icon:first-child {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite
+}
+
+startBar controls icon.managerIcon.connecting icon:last-child {
+    animation-name: blink;
+    animation-delay: .2s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite
+}
+
+startBar controls icon.managerIcon icon.manager {
+    position: absolute;
+    height: 25px;
+    line-height: 45px;
+    width: 50px;
+    background-color: transparent
+}
+
+startBar controls icon.managerIcon icon.manager:nth-child(2) {
+    top: 25px;
+    transform: rotate(180deg)
+}
+
+startBar controls icon.timezone {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 12px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+startBar controls icon.timezone currentTime,
+startBar controls icon.timezone timezone {
+    display: inline-flex;
+    color: #bac7d7
+}
+
+startBar controls icon.timezone currentTime {
+    font-size: 12px
+}
+
+startBar controls icon.timezone timezone {
+    font-size: 9px
+}
+
+startBar controls icon.timezone:hover currentTime,
+startBar controls icon.timezone:hover timezone {
+    color: #6edefa
+}
+
+startBar controls icon.userAccount.loggedIn {
+    color: #00b259
+}
+
+startBar controls icon numb {
+    position: absolute;
+    background-color: #252e37;
+    display: block;
+    width: auto;
+    font-size: 9px;
+    height: 8px;
+    line-height: 8px;
+    color: #fff;
+    padding: 1px;
+    top: 14px;
+    left: 10px;
+    transition: .3s
+}
+
+startBar controls icon:hover,
+startBar controls icon:hover numb {
+    background-color: #131e28
+}
+
+startBar controls miniControls {
+    float: left;
+    position: relative
+}
+
+startBar controls miniControls icon {
+    width: 25px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px
+}
+
+startBar separ {
+    float: left;
+    display: block;
+    height: 50px;
+    width: 1px;
+    margin-right: 0;
+    margin-left: 0
+}
+
+startBar workSpaces {
+    display: block;
+    float: left;
+    width: auto;
+    height: 50px;
+    min-width: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    box-sizing: border-box
+}
+
+startBar workSpaces:hover {
+    background-color: #131e28
+}
+
+startBar workSpaces:hover lock {
+    opacity: 1
+}
+
+startBar workSpaces:hover text {
+    background-color: #131e28
+}
+
+startBar workSpaces name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #bac7d7;
+    height: 50px;
+    line-height: 50px;
+    float: left
+}
+
+startBar workSpaces name edit {
+    z-index: 5;
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+startBar workSpaces name text {
+    display: block;
+    z-index: 10;
+    padding: 0 6px;
+    position: relative;
+    background-color: #252e37
+}
+
+startBar workSpaces name formitem {
+    box-sizing: border-box;
+    float: left;
+    width: 100%
+}
+
+startBar workSpaces name formitem input[type=text] {
+    max-width: 100%;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff
+}
+
+startBar workSpaces lock {
+    left: 10px
+}
+
+startBar workSpaces drop {
+    right: 10px
+}
+
+startBar workSpaces drop,
+startBar workSpaces lock {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    transition: all .3s
+}
+
+startBar workSpaces drop icon,
+startBar workSpaces lock icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    line-height: 30px;
+    font-size: 12px
+}
+
+startBar workSpaces drop icon:before,
+startBar workSpaces lock icon:before {
+    width: 30px;
+    height: 30px;
+    display: inline-block
+}
+
+startBar workSpaces.locked lock {
+    opacity: 1
+}
+
+startBar workSpaces.edit name edit {
+    z-index: 10
+}
+
+startBar workSpaces.edit name text {
+    z-index: 5
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: -60px;
+        opacity: 0
+    }
+
+    90% {
+        opacity: 1
+    }
+
+    100% {
+        top: 0
+    }
+}
+
+@keyframes blinkTwo {
+
+    0%,
+    88% {
+        opacity: 1
+    }
+
+    91% {
+        opacity: 0
+    }
+
+    94% {
+        opacity: 1
+    }
+
+    97% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes managerBlink {
+
+    0%,
+    94% {
+        opacity: 1
+    }
+
+    97% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes textBlink {
+    0% {
+        text-shadow: 0 0 20px #00b259
+    }
+
+    25% {
+        text-shadow: 0 0 0 #00b259
+    }
+
+    50% {
+        text-shadow: 0 0 20px #00b259
+    }
+
+    75% {
+        text-shadow: 0 0 0 #00b259
+    }
+
+    100% {
+        text-shadow: 0 0 20px #00b259
+    }
+}

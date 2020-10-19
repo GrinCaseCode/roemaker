@@ -1,0 +1,797 @@
+@import url('../../../../Themes/Default/less/colors.less');
+
+startBar{
+	display: block;
+	box-sizing: border-box;
+	background-color: @primaryBGColor;
+	height: 52px;
+	width: 100%;
+	border-bottom: 2px solid @secondaryBorderColor;
+	overflow: hidden;
+	position: absolute;
+	animation-name: drop;
+	animation-duration: .5s;
+	//flex styles
+	display: flex;
+	justify-content: space-between;
+
+	logo{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		float: left;
+		width: auto;
+		height: 50px;
+		max-height: 50px;
+		margin: 0;
+		line-height: 50px;
+		margin-right: 0;
+		transition: .3s;
+		position: relative;
+		overflow: hidden;
+
+		&:hover{
+			background-color: @secondaryBGColor;
+		}
+
+		&.active, &:active{
+			background-color: @middleBGColor;
+		}
+
+		&.update{
+			.updateLabel {
+				display: block;
+			}
+		}
+
+
+		div.mainLogo {
+			display: block;
+	    width: 50px;
+	    background: transparent url('../images/mainLogo.png') no-repeat center;
+	    height: 50px;
+		}
+
+		div.updateLabel {
+			display: none;
+			position: absolute;
+			background: transparent url('../images/upgradeIcon.png') no-repeat center;
+			left: 2px;
+			top: 2px;
+			height: 24px;
+			width: 24px;
+			animation-name: managerBlink;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+	}
+
+	fleft {
+		overflow: hidden;
+		display: block;
+		flex-grow: 0;
+	}
+
+	middle {
+		overflow: hidden;
+		display: block;
+		flex-grow: 2;
+		position: relative;
+
+		.tickersTape {
+			background-color: @secondaryBGColor;
+			height: 40px;
+			overflow: hidden;
+			color: @primaryTextColor;
+			white-space: nowrap;
+			position: absolute;
+			left: 5px;
+			right: 5px;
+			top: 5px;
+			bottom: 5px;
+
+			.tapeInner {
+				display: block;
+			  position: absolute;
+
+				&.animate {
+					animation: marquee 10s linear infinite;
+				}
+				&:hover {
+					animation-play-state: paused;
+				}
+
+				&>span {
+				  float: left;
+					width: max-content;
+				}
+
+				@keyframes marquee {
+				  0% { left: 0; }
+				  100% { left: -100%; }
+				}
+			}
+
+			.tickerItem {
+				display: inline-block;
+				margin: 5px 0px 5px 10px;
+				border-right: 1px solid @primaryBGColor;
+				font-size: 12px;
+				padding-right: 10px;
+
+				.tName {
+					float: left;
+    			padding-right: 5px;
+					font-size: 11px;
+					line-height: 15px;
+					font-weight: 600;
+					color: @primaryTextColor;
+				}
+
+				.tChange {
+					font-size: 11px;
+					float: right;
+					line-height: 15px;
+					font-weight: 600;
+					&.red {color: @dangerColor;}
+					&.green {color: @successColor;}
+				}
+
+				.tPrice {
+					width: 100%;
+    			clear: both;
+					float: left;
+					font-size: 13px;
+					font-weight: 700;
+					color: @activeTextColor;
+					margin-top: 0px;
+					line-height: 15px;
+				}
+			}
+		}
+	}
+
+	fright {
+		overflow: hidden;
+		display: block;
+		flex-grow: 0;
+	}
+
+	searchField{
+		float: left;
+		display: block;
+		padding-top: 10px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	favorites{
+		display: block;
+		float: left;
+		margin-left: 5px;
+
+		hider{
+			width: 30px;
+			height: 30px;
+			float: left;
+			line-height: 30px;
+			margin-top: 10px;
+
+			&:hover{
+				background-color: @accentColor;
+				icon{color: @activeTextColor;}
+			}
+
+			&.active, &:active{
+				background-color: @accentHoverColor;
+				icon{color: @activeTextColor;}
+			}
+
+			icon{
+				font-size: 20px;
+				color: @primaryTextColor;
+			}
+		}
+
+		item{
+			display: block;
+			box-sizing: border-box;
+			float: left;
+			width: 50px;
+			height: 50px;
+			margin: 0;
+			transition: all .3s;
+			position: relative;
+
+			&:hover{
+				background-color: @secondaryBGColor;
+			}
+
+			img{
+				max-height: 100%;
+				max-width: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+		}
+	}
+
+	connections{
+		display: block;
+		float: left;
+
+		item{
+			display: block;
+			box-sizing: border-box;
+			background-color: @primaryBGColor;
+			float: left;
+			max-width: 160px;
+			overflow: hidden;
+			height: 50px;
+			color: @primaryTextColor;
+			position: relative;
+			padding: 14px 0;
+			transition: .3s;
+			&:after{
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 20px;
+				bottom: 0;
+				opacity: 1;
+				background: -webkit-linear-gradient(left, fade(@primaryBGColor, 0%) 0%, @primaryBGColor 100%);
+				transition: opacity .1s;
+			}
+			&:before {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 20px;
+				bottom: 0;
+				z-index: 1;
+				opacity: 0;
+				background: -webkit-linear-gradient(left, fade(@secondaryBGColor, 0%) 0%, @secondaryBGColor 100%);
+				transition: opacity .1s;
+			}
+
+			&:hover{
+				background-color: @secondaryBGColor;
+				name {
+					color: @accentTextColor;
+				}
+
+				&:after {
+					opacity: 0;
+				}
+				&:before {
+					opacity: 1;
+				}
+
+			}
+
+			&.out{
+				max-width: 0;
+				min-width: 0;
+			}
+
+			name{
+				display: block;
+				position: relative;
+				font-size: 12px;
+				font-weight: 600;
+				white-space: nowrap;
+				margin-left: 20px;
+				margin-right: 15px;
+
+				status{
+					display: block;
+					position: absolute;
+					left: -12px;
+					width: 7px;
+					height: 7px;
+					border-radius: 50px;
+					top: 4px;
+					transition: background-color 1s;
+					&.disconnected{
+						background-color: @disabledTextColor;
+					}
+					&.active{
+						background-color: @statusActiveColor;
+						animation-name: blinkTwo;
+						animation-duration: 4s;
+						animation-iteration-count: infinite;
+					}
+					&.warning{
+						background-color: @statusWarningColor;
+						animation-name: blinkTwo;
+						animation-duration: 4s;
+						animation-iteration-count: infinite;
+					}
+					&.error{
+						background-color: @dangerColor;
+					}
+					&.connecting{
+						animation-name: blink;
+						animation-duration: .8s;
+						animation-iteration-count: infinite;
+					}
+
+				}
+			}
+
+			ping{
+				margin-left: 20px;
+				margin-right: 15px;
+				display: block;
+				font-size: 9px;
+				font-weight: 600;
+				white-space: nowrap;
+				&.disconnected{
+					color: @secondaryTextColor;
+				}
+			}
+		}
+		holder{
+			display: none;
+		}
+
+		&.mini{
+			position: relative;
+
+			&.open{
+				holder{
+					background-color: @secondaryBGColor;
+				}
+				items{
+					display: block;
+				}
+			}
+
+			items{
+				position: absolute;
+				top: 100%;
+				right: 0;
+				display: none;
+			}
+
+			item{
+				width: 100%;
+				max-width: unset;
+				padding: 15px 20px 15px 40px;
+				background-color: @secondaryBGColor;
+				&:after{
+					background-image: linear-gradient(270deg, @secondaryBGColor 0.55%, @secondaryBGColor 49.72%, rgba(37, 46, 55, 0) 100%);
+				}
+				&:hover{
+					background-color: @primaryBGColor;
+					&:after{
+						background-image: linear-gradient(270deg, @primaryBGColor 0.55%, @primaryBGColor 49.72%, rgba(37, 46, 55, 0) 100%);
+					}
+				}
+			}
+
+			holder{
+				display: block;
+				box-sizing: border-box;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				text-align: center;
+				padding: 0 20px;
+				background-color: @primaryBGColor;
+				&:hover{
+					background-color: @secondaryBGColor;
+				}
+
+				icon{
+					display: inline-block;
+					width: 20px;
+					height: 10px;
+					background-image: url('../images/link.svg');
+					background-position: center;
+					background-repeat: no-repeat;
+					margin-right: 10px;
+				}
+
+				name{
+					color: @secondaryTextColor;
+					font-size: 12px;
+
+				}
+			}
+		}
+	}
+	controls{
+		display: block;
+		float: left;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color: @primaryTextColor;
+
+		icon{
+			width: 50px;
+			height: 50px;
+			font-size: 16px;
+			line-height: 50px;
+			position: relative;
+			color: @primaryTextColor;
+	    &.managerIcon{
+	    	&:hover{
+	    		icon{
+	    			color: @accentTextColor;
+	    		}
+	    	}
+	    	&.disconnected {
+					icon.manager{
+						color: @primaryTextColor;
+					}
+		    	&:hover{
+		    		icon.manager{
+		    			color: @accentTextColor;
+		    		}
+		    	}
+				}
+				&.active{
+					background-color: @primaryBGColor;
+
+					&:hover {
+						background-color: @secondaryBGColor;
+					}
+
+					icon.manager{
+						color: @statusActiveColor;
+					}
+
+					icon:first-child{
+						animation-name: managerBlink;
+						animation-duration: 4s;
+						animation-iteration-count: infinite;
+					}
+
+					icon:last-child{
+						animation-name: managerBlink;
+						animation-delay: .2s;
+						animation-duration: 4s;
+						animation-iteration-count: infinite;
+					}
+				}
+				&.warning{
+					icon.manager{
+						color: @statusWarningColor;
+					}
+
+					icon:first-child{
+						animation-name: managerBlink;
+						animation-duration: 4s;
+						animation-iteration-count: infinite;
+					}
+
+					icon:last-child{
+						animation-name: managerBlink;
+						animation-delay: .2s;
+						animation-duration: 4s;
+						animation-iteration-count: infinite;
+					}
+				}
+				&.connecting{
+					icon.manager{
+						color: @disabledTextColor;
+					}
+
+					icon:first-child{
+						animation-name: blink;
+						animation-duration: 1s;
+						animation-iteration-count: infinite;
+					}
+
+					icon:last-child{
+						animation-name: blink;
+						animation-delay: .2s;
+						animation-duration: 1s;
+						animation-iteration-count: infinite;
+					}
+				}
+	      icon.manager{
+	        position: absolute;
+	        height: 25px;
+	        line-height: 45px;
+	        width: 50px;
+					background-color: transparent;
+	        &:nth-child(2){
+	        	top: 25px;
+	        	transform: rotate(180deg);
+	        }
+				}
+	    }
+
+			&.timezone{
+				width: auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				line-height: 12px;
+				padding-left: 15px;
+				padding-right: 15px;
+
+				currentTime, timezone{
+					display: inline-flex;
+					color: @primaryTextColor;
+				}
+
+				currentTime{
+					font-size: 12px;
+				}
+
+				timezone{
+					font-size: 9px;
+				}
+
+				&:hover {
+					currentTime, timezone{
+						color: @accentTextColor;
+					}
+				}
+			}
+			&.userAccount {
+				&.loggedIn {
+					color: @successColor;
+				}
+			}
+			numb{
+				position: absolute;
+				background-color: @primaryBGColor;
+				display: block;
+				width: auto;
+				font-size: 9px;
+				height: 8px;
+				line-height: 8px;
+				color: @activeTextColor;
+				padding: 1px;
+		    top: 14px;
+  			left: 10px;
+  			transition: .3s;
+			}
+
+			&:hover{
+				background-color: @secondaryBGColor;
+				numb{
+					background-color: @secondaryBGColor;
+				}
+			}
+
+			// Disabled till we have an activated state
+			// &.active, &:active{
+			// 	background-color: @middleBGColor;
+			// 	numb{
+			// 		background-color: @middleBGColor;
+			// 	}
+			// }
+		}
+
+		miniControls{
+			float: left;
+			position: relative;
+			icon{
+				width: 25px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 12px;
+			}
+		}
+	}
+
+	separ{
+		float: left;
+		display: block;
+		height: 50px;
+		width: 1px;
+		//background-color: @secondaryBGColor;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	workSpaces{
+		display: block;
+		float: left;
+		width: auto;
+		height: 50px;
+		min-width: 100px;
+		padding-left: 40px;
+		padding-right: 40px;
+		position: relative;
+		box-sizing: border-box;
+
+		&:hover{
+			background-color: @secondaryBGColor;
+
+			lock{
+				opacity: 1;
+			}
+
+			text{
+				background-color: @secondaryBGColor;
+			}
+		}
+
+		name{
+			font-size: 12px;
+			font-weight: 600;
+			color: @primaryTextColor;
+			height: 50px;
+			line-height: 50px;
+			float: left;
+
+			edit{
+				z-index: 5;
+				position: absolute;
+				left: 40px;
+				right: 40px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			text{
+				display: block;
+				z-index: 10;
+				padding: 0 6px;
+				position: relative;
+				background-color: @primaryBGColor;
+			}
+
+			formitem{
+				box-sizing: border-box;
+				float: left;
+				width: 100%;
+				input[type="text"]{
+					max-width: 100%;
+					width: 100%;
+					font-size: 12px;
+					font-weight: 600;
+					color: @activeTextColor;
+				}
+			}
+		}
+
+		lock{
+			left: 10px;
+		}
+		drop{
+			right: 10px;
+		}
+
+		lock,
+		drop{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			text-align: center;
+			transition: all .3s;
+
+			icon{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				vertical-align: middle;
+				line-height: 30px;
+				font-size: 12px;
+				&:before{
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+				}
+			}
+		}
+
+		&.locked{
+			lock{
+				opacity: 1;
+			}
+		}
+
+		&.edit{
+			name{
+				edit{
+					z-index: 10;
+				}
+				text{
+					z-index: 5;
+				}
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes drop {
+	0% {
+		top: -60px;
+		opacity: 0;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		top: 0;
+	}
+}
+
+
+@keyframes blinkTwo {
+	0% {
+		opacity: 1;
+	}
+	88%{
+		opacity: 1;
+	}
+	91%{
+		opacity: 0;
+	}
+	94%{
+		opacity: 1;
+	}
+	97%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@keyframes managerBlink {
+	0% {
+		opacity: 1;
+	}
+	94%{
+		opacity: 1;
+	}
+	97%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes textBlink {
+	0% {
+		text-shadow: 0px 0px 20px @successColor;
+	}
+	25%{
+		text-shadow: 0px 0px 0px @successColor;
+	}
+	50%{
+		text-shadow: 0px 0px 20px @successColor;
+	}
+	75%{
+		text-shadow: 0px 0px 0px @successColor;
+	}
+	100% {
+		text-shadow: 0px 0px 20px @successColor;
+	}
+}

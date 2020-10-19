@@ -1,0 +1,929 @@
+m<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="UTF-8" />
+   <link rel="stylesheet" href="../../themes/default/css/core.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style1.css" />
+   <link rel="stylesheet" href="../../Themes/Default/css/jquery.mCustomScrollbar.min.css" />
+   <script src="../../themes/default/js/jquery.js"></script>
+   <script src="../../Themes/Default/js/jquery.mCustomScrollbar.min.js"></script>
+
+   <script>
+       var a;
+   </script>
+</head>
+<body>
+
+   <searchResults id="seach_part" class="">
+
+       <notfound class="none">
+           <!-- <img src="images/Group.png"> -->
+           <text>
+               <b>No results found for <br />"BLA BLA BLA"</b>
+               Please try another search phrase
+           </text>
+       </notfound>
+
+       <!-- не всегда нужен, по умолчанию None -->
+
+       <panelBody id="main_panel_body" class="open">
+           <!--withUserBlock - when adding a user LOG IN bar-->
+           <panelsContainer id="panel_groups_container">
+
+               <collapsedPanel template="panels_group" class="open panel_analytics" dummy=dummy>
+
+                <panelHeader>
+                    <panelTitle>
+                        Analytics
+                    </panelTitle>
+                </panelHeader>
+
+                <panelBody templateItem="panels_container" dummy=dummy>
+
+                    <!--
+                Список классов для panelIcon
+
+                Market
+                Misc
+                Informational
+                Portfolio
+                Trading
+                Analytics
+                Binds
+                -->
+
+                    <panelIcon template="plugin_large" class="Analytics favorite">
+                        <shortName templateItem="short_name">
+                            Cht
+                        </shortName>
+                        <name templateItem="name">
+                           Chart
+                        </name>
+
+                        <favorite>
+                            <icon class="star" templateItem="favorite"></icon>
+                        </favorite>
+
+                    </panelIcon>
+
+                    <panelIcon template="plugin_large" class="Analytics favorite" dummy=dummy>
+                        <shortName templateItem="short_name">
+                            WLi
+                        </shortName>
+                        <name templateItem="name">
+                           Watchlist
+                        </name>
+
+                        <favorite>
+                            <icon class="star" templateItem="favorite" dummy=dummy></icon>
+                        </favorite>
+                    </panelIcon>
+
+                    <panelIcon template="plugin_large" class="Analytics">
+                        <shortName templateItem="short_name">
+                            PrS
+                        </shortName>
+                        <name templateItem="name">
+                            Price Statistic
+                        </name>
+
+                        <favorite>
+                            <icon class="star" templateItem="favorite"></icon>
+                        </favorite>
+                    </panelIcon>
+
+                    <panelIcon template="plugin_large" class="Analytics" dummy=dummy>
+                        <shortName templateItem="short_name">
+                            T&S
+                        </shortName>
+                        <name templateItem="name">
+                            Time & Sales
+                        </name>
+
+                        <favorite>
+                            <icon class="star" templateItem="favorite"></icon>
+                        </favorite>
+                    </panelIcon>
+
+                    <panelIcon template="plugin_large" class="Analytics" dummy=dummy>
+                        <shortName templateItem="short_name">
+                            DSf
+                        </shortName>
+                        <name templateItem="name">
+                            Dom Surface
+                        </name>
+
+                        <favorite>
+                            <icon class="star" templateItem="favorite"></icon>
+                        </favorite>
+                    </panelIcon>
+
+                    <panelIcon template="plugin_large" class="Analytics" dummy=dummy>
+                        <shortName templateItem="short_name">
+                            TPO
+                        </shortName>
+                        <name templateItem="name">
+                          TPO Chart
+                        </name>
+
+                        <favorite>
+                            <icon class="star" templateItem="favorite"></icon>
+                        </favorite>
+                    </panelIcon>
+
+                </panelBody>
+
+            </collapsedPanel>
+           </panelsContainer>
+
+           <!-- Никита: Опшн серии потом -->
+           <collapsedPanel class="none">
+
+               <panelHeader>
+                   <panelTitle>
+                       <button class="mini iconed bordered"><icon class="prev"></icon></button>18 Jan 2019 (466) - Strikes
+                   </panelTitle>
+               </panelHeader>
+
+           </collapsedPanel>
+           <collapsedPanel template="panels_group" class="open panel_trading" dummy=dummy>
+
+            <panelHeader>
+                <panelTitle>
+                    Trading
+                </panelTitle>
+                <panelControls>
+                    <icon class="dropDown"></icon>
+                </panelControls>
+            </panelHeader>
+
+            <panelBody templateItem="panels_container" dummy=dummy>
+
+                <!--
+            Список классов для panelIcon
+
+            Market
+            Misc
+            Informational
+            Portfolio
+            Trading
+            Analytics
+            Binds
+            -->
+
+                <panelIcon template="plugin_large" class="Trading favorite">
+                    <shortName templateItem="short_name">
+                        COE
+                    </shortName>
+                    <name templateItem="name">
+                        Crypto OE
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Trading favorite" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        DOM
+                    </shortName>
+                    <name templateItem="name">
+                        DOM Trader
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite" dummy=dummy></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Trading">
+                    <shortName templateItem="short_name">
+                        MD
+                    </shortName>
+                    <name templateItem="name">
+                       Market Depth
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Trading" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        TrS
+                    </shortName>
+                    <name templateItem="name">
+                        Trading Simulator
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Trading" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        MaR
+                    </shortName>
+                    <name templateItem="name">
+                        Market replay
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Trading" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        StR
+                    </shortName>
+                    <name templateItem="name">
+                        Strategy runner
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+            </panelBody>
+
+        </collapsedPanel>
+        <collapsedPanel template="panels_group" class="open panel_portfolio" dummy=dummy>
+
+            <panelHeader>
+                <panelTitle>
+                    Portfolio
+                </panelTitle>
+                <panelControls>
+                    <icon class="dropDown"></icon>
+                </panelControls>
+            </panelHeader>
+
+            <panelBody templateItem="panels_container" dummy=dummy>
+                <panelIcon template="plugin_large" class="Portfolio favorite">
+                    <shortName templateItem="short_name">
+                        Ord
+                    </shortName>
+                    <name templateItem="name">
+                       Working orders
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite favorite"></icon>
+                    </favorite>
+
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Portfolio favorite" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        Trd
+                    </shortName>
+                    <name templateItem="name">
+                        Traders
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite" dummy=dummy></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Portfolio">
+                    <shortName templateItem="short_name">
+                        OrH
+                    </shortName>
+                    <name templateItem="name">
+                        Orders History
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Portfolio" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        Syn
+                    </shortName>
+                    <name templateItem="name">
+                        Synthetic Symbol
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+                <panelIcon template="plugin_large" class="Portfolio" dummy=dummy>
+                    <shortName templateItem="short_name">
+                        HiS
+                    </shortName>
+                    <name templateItem="name">
+                      Historical symbols
+                    </name>
+
+                    <favorite>
+                        <icon class="star" templateItem="favorite"></icon>
+                    </favorite>
+                </panelIcon>
+
+            </panelBody>
+
+        </collapsedPanel>
+       </panelsContainer>
+
+       <!-- Никита: Опшн серии потом -->
+       <collapsedPanel class="none">
+
+           <panelHeader>
+               <panelTitle>
+                   <button class="mini iconed bordered"><icon class="prev"></icon></button>18 Jan 2019 (466) - Strikes
+               </panelTitle>
+           </panelHeader>
+
+       </collapsedPanel>
+       <collapsedPanel template="panels_group" class="open panel_informational" dummy=dummy>
+
+        <panelHeader>
+            <panelTitle>
+                Informational
+            </panelTitle>
+            <panelControls>
+                <icon class="dropDown"></icon>
+            </panelControls>
+        </panelHeader>
+
+        <panelBody templateItem="panels_container" dummy=dummy>
+
+            <!--
+        Список классов для panelIcon
+
+        Market
+        Misc
+        Informational
+        Portfolio
+        Trading
+        Analytics
+        Binds
+        -->
+
+            <panelIcon template="plugin_large" class="Informational favorite">
+                <shortName templateItem="short_name">
+                    Acc
+                </shortName>
+                <name templateItem="name">
+                    Account info
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Informational favorite" dummy=dummy>
+                <shortName templateItem="short_name">
+                    AO
+                </shortName>
+                <name templateItem="name">
+                   Account operation
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite" dummy=dummy></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Informational">
+                <shortName templateItem="short_name">
+                    CrB
+                </shortName>
+                <name templateItem="name">
+                    Crypto balances
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Informational" dummy=dummy>
+                <shortName templateItem="short_name">
+                    Sym
+                </shortName>
+                <name templateItem="name">
+                  Event log
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Informational" dummy=dummy>
+                <shortName templateItem="short_name">
+                    EvL
+                </shortName>
+                <name templateItem="name">
+                    Alerts log
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+
+        </panelBody>
+
+    </collapsedPanel>
+    <collapsedPanel template="panels_group" class="open panel_misc" dummy=dummy>
+
+        <panelHeader>
+            <panelTitle>
+                Misc
+            </panelTitle>
+            <panelControls>
+                <icon class="dropDown"></icon>
+            </panelControls>
+        </panelHeader>
+
+        <panelBody templateItem="panels_container" dummy=dummy>
+
+            <panelIcon template="plugin_large" class="Misc favorite">
+                <shortName templateItem="short_name">
+                    HEx
+                </shortName>
+                <name templateItem="name">
+                    Account info
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Misc favorite" dummy=dummy>
+                <shortName templateItem="short_name">
+                    MH
+                </shortName>
+                <name templateItem="name">
+                   Account operation
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite" dummy=dummy></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Misc =">
+                <shortName templateItem="short_name">
+                    SMx
+                </shortName>
+                <name templateItem="name">
+                   Crypto balances
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    HLP
+                </shortName>
+                <name templateItem="name">
+                   Event log
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    SMp
+                </shortName>
+                <name templateItem="name">
+                   Alerts log
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    SMp
+                </shortName>
+                <name templateItem="name">
+                   Account info
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    ExT
+                </shortName>
+                <name templateItem="name">
+                  Account operation
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    SMx
+                </shortName>
+                <name templateItem="name">
+                   Crypto balances
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    QB
+                </shortName>
+                <name templateItem="name">
+                 Event log
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+            <panelIcon template="plugin_large" class="Misc" dummy=dummy>
+                <shortName templateItem="short_name">
+                    BaM
+                </shortName>
+                <name templateItem="name">
+               Alerts log
+                </name>
+
+                <favorite>
+                    <icon class="star" templateItem="favorite"></icon>
+                </favorite>
+            </panelIcon>
+
+        </panelBody>
+
+    </collapsedPanel>
+   </panelsContainer>
+
+   <!-- Никита: Опшн серии потом -->
+   <collapsedPanel class="none">
+
+       <panelHeader>
+           <panelTitle>
+               <button class="mini iconed bordered"><icon class="prev"></icon></button>18 Jan 2019 (466) - Strikes
+           </panelTitle>
+       </panelHeader>
+
+   </collapsedPanel>
+   </panelsContainer>
+
+   <!-- Никита: Опшн серии потом -->
+   <collapsedPanel class="none">
+
+       <panelHeader>
+           <panelTitle>
+               <button class="mini iconed bordered"><icon class="prev"></icon></button>18 Jan 2019 (466) - Strikes
+           </panelTitle>
+       </panelHeader>
+
+   </collapsedPanel>
+       </panelsContainer>
+
+       <!-- Никита: Опшн серии потом -->
+       <collapsedPanel class="none">
+
+           <panelHeader>
+               <panelTitle>
+                   <button class="mini iconed bordered"><icon class="prev"></icon></button>18 Jan 2019 (466) - Strikes
+               </panelTitle>
+           </panelHeader>
+
+       </collapsedPanel>
+           <!--
+           <ConnectionsCollapsedPanels id="connections_collapsers_container">
+
+               <collapsedPanel class="open" template="connection_collapser">
+
+                   <panelHeader templateitem="header">
+                       <panelTitle templateitem="connection_name">
+                           IQ Feed
+                       </panelTitle>
+                       <panelControls>
+                           <status templateitem="search_status">Searching...</status>
+                           <icon templateitem="collapser_arrow" class="dropDown"></icon>
+                       </panelControls>
+                   </panelHeader>
+
+                   <panelBody templateitem="instruments" dummy=dummy>
+
+                   </panelBody>
+
+               </collapsedPanel>
+
+               <collapsedPanel class="open" template="connection_collapser" dummy=dummy>
+
+                   <panelHeader templateitem="header">
+                       <panelTitle templateitem="connection_name">
+                           IQ Feed
+                       </panelTitle>
+                       <panelControls>
+                           <icon class="dropDown"></icon>
+                       </panelControls>
+                   </panelHeader>
+
+                   <panelBody templateitem="instruments">
+
+                       <item template="instrument">
+
+                           <instrument>
+                               <textWrapper class="">
+                                   <name>
+                                       <restpreffixpart templateItem="instrument_rest_preffix"></restpreffixpart><highlight templateItem="instrument_highlight">Y</highlight><restsuffixpart templateItem="instrument_rest_suffix">AD/CHF</restsuffixpart>
+                                   </name>
+                                   <descr>
+                                       <restpreffixpart templateItem="description_rest_preffix">Canadian Dollar/Swiss </restpreffixpart><highlight templateItem="description_highlight">Fr</highlight><restsuffixpart templateItem="description_rest_suffix">ank</restsuffixpart>
+                                   </descr>
+                               </textWrapper>
+                               <exchange templateitem="instrument_additional_info">
+                                   Off-exch | Forex
+                               </exchange>
+                           </instrument>
+
+                           <panels templateitem="panels_for_instrument">
+                               <panelTile class="Binds" template="plugin_small">
+                                   <border>
+                                       <name templateItem="short_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin_small" dummy=dummy>
+                                   <border>
+                                       <name templateItem="short_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin_small" dummy=dummy>
+                                   <border>
+                                       <name templateItem="short_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin_small" dummy=dummy>
+                                   <border>
+                                       <name templateItem="short_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin_small" dummy=dummy>
+                                   <border>
+                                       <name templateItem="short_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin_small" dummy=dummy>
+                                   <border>
+                                       <name templateItem="short_name">Cha</name>
+                                   </border>
+                               </panelTile>
+
+                               <more templateitem="show_more_button:button">
+                                   <icon class="mini_burger"></icon>
+                               </more>
+                           </panels>
+                       </item>
+
+                       <item template="instrument" class="open" dummy=dummy>
+                           <instrument>
+                               <textWrapper class="">
+                                   <name>
+                                       <restpreffixpart templateItem="instrument_rest_preffix"></restpreffixpart><highlight templateItem="instrument_highlight">H</highlight><restsuffixpart templateItem="instrument_rest_suffix">AD/CHF</restsuffixpart>
+                                   </name>
+                                   <descr templateitem="instrument_description">Canadian Dollar/Swiss Frank</descr>
+                               </textWrapper>
+                               <exchange templateitem="instrument_additional_info">
+                                   Off-exch | Forex
+                               </exchange>
+                           </instrument>
+
+                           <panels>
+
+
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Analytics" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Trading" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Portfolio" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Informational" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Misc" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+
+                               <more>
+                                   <icon class="mini_burger"></icon>
+                               </more>
+
+                               <a href="#" class="link">Get options</a>
+                           </panels>
+                       </item>
+
+                   </panelBody>
+
+               </collapsedPanel>
+
+               <!-- Никита: Опшн серии потом -->
+               <!--
+               <collapsedPanel class="none">
+
+                   <panelHeader>
+                       <panelTitle>
+                           18 Jan 2019 (466) - Strikes
+                       </panelTitle>
+                       <panelControls>
+                           <icon class="dropDown"></icon>
+                       </panelControls>
+                   </panelHeader>
+
+                   <panelBody>
+
+                       <item>
+
+                           <instrument>
+                               <textWrapper class="">
+                                   <name>
+                                       <highlight>C</highlight>AD/CHF
+                                   </name>
+                                   <descr>Canadian Dollar/Swiss Frank</descr>
+                               </textWrapper>
+                               <exchange>
+                                   Off-exch | Forex
+                               </exchange>
+                           </instrument>
+
+                           <panels>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+
+                               <more>
+                                   <icon class="mini_burger"></icon>
+                               </more>
+                           </panels>
+                       </item>
+
+                       <item class="open">
+                           <instrument>
+                               <textWrapper class="">
+                                   <name>
+                                       <highlight>C</highlight>AD/CHF
+                                   </name>
+                                   <descr>Canadian Dollar/Swiss Frank</descr>
+                               </textWrapper>
+                               <exchange>
+                                   Off-exch | Forex
+                               </exchange>
+                           </instrument>
+
+                           <panels>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+                               <panelTile class="Binds" template="plugin">
+                                   <border>
+                                       <name templateItem="plugin_name">Cha</name>
+                                   </border>
+                               </panelTile>
+
+                               <more>
+                                   <icon class="mini_burger"></icon>
+                               </more>
+
+                               <a href="#" class="link">Get options</a>
+                           </panels>
+                       </item>
+
+                   </panelBody>
+
+               </collapsedPanel>
+            -->
+           </ConnectionsCollapsedPanels>
+       </panelBody>
+
+       <panelFooter id="cancel_search_footer" class="none">
+           <center>
+               <button class="black oneHalf" id="cancel_search">
+                   Cancel search
+               </button>
+           </center>
+       </panelFooter>
+
+       <panelFooter id="side_bar_footer" class="">
+           <text>
+               <button id="showHidden:button" class="iconed mini black">
+                   <icon class="visible"></icon>
+               </button>
+               <button id="newVersionButton" class="updateButton bordered">
+                   NEW VERSION
+               </button>
+               <a id="version" class="link">About</a>
+           </text>
+           <fright>
+               <button class="black half" id="exit_button">
+                   EXIT
+               </button>
+           </fright>
+       </panelFooter>
+
+
+   </searchResults>
+
+</body>
+</html>

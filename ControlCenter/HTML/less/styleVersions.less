@@ -1,0 +1,506 @@
+@import url('../../../../Themes/Default/less/colors.less');
+
+*{
+	position: relative;
+	box-sizing: border-box;
+}
+
+aboutPanel{
+	width: 325px;
+	float: left;
+
+	bander{
+		height: 445px;
+		width: 100%;
+		float: left;
+		background-image: url('../images/Frame.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		icon.close{
+			position: absolute;
+			right: 0;
+			top: 0;
+			color: @contextMenuTextColor;
+			z-index: 15;
+			width: 20px;
+			height: 20px;
+			font-size: 16px;
+			line-height: 20px;
+
+			&:hover{
+				color: @contextMenuTextColor;
+			}
+		}
+	}
+
+	text{
+		float: left;
+		width: 100%;
+		position: absolute;
+		background-color: transparent;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		text-align: center;
+
+		content{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 50px;
+			padding-bottom: 30px;
+			display: block;
+			float: left;
+			width: 100%;
+			position: absolute;
+			background-color: transparent;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+
+			footer{
+				position: absolute;
+				bottom: 30px;
+				left: 10px;
+				right: 10px;
+				text-align: center;
+
+				button{
+					display: block;
+					margin: auto;
+					float: none;
+					margin-bottom: 20px;
+					width: 145px;
+
+					&.custom{
+						border: 1px solid @contextMenuTextColor;
+					}
+				}
+
+				copyright{
+					display: block;
+					font-style: normal;
+					font-weight: normal;
+					line-height: 14px;
+					font-size: 10px;
+					text-align: center;
+					color: @contextMenuTextColor;
+					clear: both;
+				}
+
+				a{
+					font-style: normal;
+					font-weight: normal;
+					line-height: 15px;
+					font-size: 10px;
+					text-align: center;
+					text-decoration-line: underline;
+					color: @contextMenuTextColor;
+
+					&.link{
+						display: inline-block;
+						color: @contextMenuTextColor;
+					}
+
+					&:hover{
+						text-decoration: none;
+					}
+				}
+
+				.powered {
+			    display: block;
+			    margin: 15px auto 0;
+			    background-color: @contextMenuTextColor;
+			    width: 170px;
+			    border-radius: 8px;
+			    height: 16px;
+					line-height: 16px;
+			    font-size: 9px;
+			    text-transform: uppercase;
+			    text-align: center;
+			    font-weight: 700;
+			    color: @accentColor;
+					opacity: 0.6;
+					text-decoration: none;
+
+					&:hover {
+						opacity: 1;
+						cursor: pointer;
+					}
+
+					icon {
+						display: inline-block;
+				    float: none;
+				    width: 26px;
+				    height: 26px;
+				    font-size: 18px;
+				    background-color: @contextMenuTextColor;
+				    line-height: 27px;
+				    border-radius: 50%;
+				    margin-top: -8px;
+				    color: @accentColor;
+				    top: 2px;
+						&:hover {
+							color: @accentColor;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			logo{
+				margin-bottom: 10px;
+				display: block;
+
+				div.aboutLogo {
+					display: inline-block;
+					background: transparent url('../images/aboutLogo.png') no-repeat center;
+					width: 200px;
+					height: 50px;
+				}
+			}
+
+			centerBlock{
+				width: 300px;
+				height: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				background-color: transparent;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				textDescr{
+					display: inline-flex;
+					line-height: 19px;
+					font-size: 14px;
+					color: @contextMenuTextColor;
+					margin-top: 5px;
+
+					a.link{
+						color: @contextMenuTextColor;
+
+						&.small{
+							line-height: 14px;
+							font-size: 11px;
+						}
+
+						&:hover{
+							color: @contextMenuTextColor;
+						}
+					}
+				}
+
+				status{
+					display: inline-flex;
+					line-height: 19px;
+					font-size: 14px;
+					color: @contextMenuTextColor;
+				}
+
+				throbber{
+					display: block;
+					width: 60px;
+					height: 60px;
+					line-height: 60px;
+					margin-bottom: 10px;
+					font-size: 14px;
+					color: @contextMenuTextColor;
+					text-align: center;
+
+					&:before{
+						content: " ";
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-image: url('../images/throbber.svg');
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: contain;
+						transform: rotate(-30deg);
+					}
+
+					thrText{
+						display: block;
+					}
+
+					&.error{
+						background-image: url('../images/throbberError.svg');
+					}
+
+					&.normal{
+						&:before{
+							animation: rotateThrobber 2s infinite;
+							animation-timing-function: cubic-bezier(.58,0,.41,.91);
+						}
+					}
+
+				}
+			}
+
+			@-webkit-keyframes rotateThrobber {
+				0% {
+					transform: rotate(-30deg);
+				}
+				100% {
+					transform: rotate(1770deg);
+				}
+			}
+
+			descr{
+				font-size: 10px;
+				line-height: 30px;
+				color: @contextMenuTextColor;
+				margin-bottom: 15px;
+				display: block;
+
+				versionMiniDescr{
+					display: block;
+					color: @contextMenuTextColor;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 14px;
+					font-size: 11px;
+					text-align: center;
+					margin-top: 5px;
+
+					a{
+						&.link{
+							color: @contextMenuTextColor;
+							text-decoration: underline;
+							&:hover{
+								color: @contextMenuTextColor;
+							}
+						}
+					}
+				}
+
+				version{
+					line-height: 14px;
+					font-size: 22px;
+					font-weight: 600;
+					display: inline-block;
+					// margin-bottom: 10px;
+					vertical-align: middle;
+				}
+
+				versionRollback {
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: 5px;
+					margin-right: -29px;
+					button.iconed {
+						icon { color: @contextMenuTextColor; }
+					}
+				}
+			}
+
+			footer{
+				font-size: 10px;
+				line-height: 15px;
+				display: block;
+
+				.link{
+					display: inline-block;
+					margin-top: 2px;
+					margin-left: 5px;
+					color: @accentTextColor;
+					cursor: pointer;
+
+					&:hover{
+						color: @activeTextColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes scro {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 600px 0;
+	}
+}
+
+*{
+	position: relative;
+}
+panel.versionManager{
+	width: 235px;
+	height: auto;
+
+	panelBody{
+		background-color: @secondaryBGColor;
+		padding-top: 0;
+		.green{
+			color: #32DB87;
+		}
+		changer{
+			width: 100%;
+			border-bottom: 1px solid @primaryBGColor;
+			padding: 0;
+			float: left;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-left: -20px;
+			margin-right: -20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-bottom: 20px;
+
+			button{
+				width: 50%;
+				float: left;
+				margin-right: 0;
+				margin-left: 0;
+				background-color: transparent;
+				border: 1px solid @primaryBGColor;
+
+				&.active{
+					border: 1px solid @accentColor;
+					color: @accentTextColor;
+
+					&:hover{
+						border: 1px solid @accentHoverColor;
+					}
+				}
+
+				.indicator{
+					display: inline-block;
+					background: #32DB87;
+					border-radius: 2px;
+					width: 4px;
+					height: 4px;
+					top: -6px;
+					margin-right: -4px;
+				}
+
+				&:hover{
+					border: 1px solid @accentColor;
+				}
+			}
+		}
+
+		.backLogo{
+			position: absolute;
+			right: 20px;
+			top: 70px;
+		}
+
+		version{
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			font-size: 24px;
+			color: @primaryTextColor;
+			display: block;
+			z-index: 5;
+			clear: both;
+
+			a.link{
+				display: inline-block;
+				cursor: pointer;
+				margin-top: -5px;
+				icon{
+					color: @accentTextColor;
+					display: inline-block;
+					float: none;
+					margin-top: -5px;
+				}
+			}
+		}
+
+		versionDescr{
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			font-size: 10px;
+			color: @primaryTextColor;
+			display: block;
+			margin-top: 0;
+			z-index: 5;
+			clear: both;
+		}
+
+		versionMiniDescr{
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			font-size: 10px;
+			color: @disabledTextColor;
+			display: block;
+			margin-top: 7px;
+			z-index: 5;
+			clear: both;
+		}
+	}
+
+	panelFooter{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+
+		text{
+			line-height: 24px;
+			height: 24px;
+			text-align: center;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 12px;
+			color: @primaryTextColor;
+
+			icon{
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				float: none;
+				display: inline-block;
+				color: @primaryTextColor;
+				margin-right: -5px;
+			}
+		}
+
+		button{
+			margin-top: 0px;
+			margin-bottom: 0;
+			display: block;
+			margin: auto;
+			float: none;
+			width: auto;
+			padding-left: 20px;
+			padding-right: 20px;
+			&.bordered{
+				border: 1px solid @secondaryBGColor;
+				&:hover{
+					border: 1px solid @accentColor;
+				}
+			}
+		}
+	}
+}
+
+.loading{
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+// @keyframes rotate {
+//     from {transform: rotate(0deg)}
+//     to {transform: rotate(10000deg)}
+// }

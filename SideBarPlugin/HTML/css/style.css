@@ -1,0 +1,450 @@
+notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent
+}
+
+notFound text {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 10px;
+    text-align: center;
+    color: #535c65
+}
+
+notFound text b {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 600;
+    color: #bac7d7;
+    margin-bottom: 10px;
+    display: block
+}
+
+searchResults {
+    width: 100%;
+    min-height: 530px;
+    max-width: 523px;
+    max-height: 530px;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    background-color: #252e37;
+    border: 2px solid #00566c;
+    overflow: hidden;
+    animation-name: show;
+    animation-duration: .5s;
+    position: relative;
+    border-left: 0;
+    border-top: 0;
+    padding-bottom: 60px
+}
+
+searchResults:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: -1px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, .25);
+    z-index: 10005000
+}
+
+searchResults panelFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    float: left;
+    height: 44px;
+    clear: both;
+    padding: 10px;
+    background-color: #131e28;
+    box-sizing: border-box
+}
+
+searchResults panelFooter text {
+    font-size: 11px;
+    color: #535C65;
+    display: block;
+    float: left;
+    vertical-align: middle;
+    line-height: 20px
+}
+
+searchResults panelFooter text button.iconed {
+    margin: 0 5px 0 0;
+    display: block;
+    float: left
+}
+
+searchResults panelFooter text button.updateButton {
+    display: inline-block;
+    margin-right: 5px
+}
+
+searchResults panelFooter text .link {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 20px;
+    text-decoration: underline;
+    vertical-align: middle
+}
+
+searchResults panelFooter text .link:first-child {
+    margin-left: 0
+}
+
+searchResults panelFooter text .link:first-child:before {
+    content: none
+}
+
+searchResults panelFooter text .link:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: -11px;
+    top: -2px;
+    height: 20px;
+    width: 1px;
+    background-color: #252e37
+}
+
+searchResults panelFooter text .link:last-child:before {
+    content: none
+}
+
+searchResults panelFooter center {
+    display: block;
+    text-align: center;
+    float: left;
+    width: 100%
+}
+
+searchResults panelFooter button {
+    float: none;
+    margin: 0 auto
+}
+
+searchResults>panelBody {
+    padding-top: 10px;
+    overflow: overlay;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 44px;
+    border-bottom: 1px solid #252e37
+}
+
+searchResults>panelBody.withUserBlock {
+    bottom: 86px
+}
+
+searchResults collapsedPanel {
+    width: 100%;
+    height: auto;
+    max-width: 523px;
+    display: block;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #252e37;
+    max-height: 40px;
+    transition: .3s;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+searchResults collapsedPanel.noHeader panelHeader {
+    display: none
+}
+
+searchResults collapsedPanel.noHeader panelBody {
+    padding-top: 15px
+}
+
+searchResults collapsedPanel panelHeader {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    width: 100%;
+    z-index: 20;
+    padding-left: 10px;
+    line-height: 40px;
+    background-color: #252e37;
+    transition: .3s
+}
+
+searchResults collapsedPanel panelHeader:hover panelControls icon,
+searchResults collapsedPanel panelHeader:hover panelTitle {
+    color: #fff
+}
+
+searchResults collapsedPanel panelHeader panelTitle {
+    color: #6e7780;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 5;
+    text-transform: uppercase;
+    transition: .3s;
+    font-weight: 900;
+font-size: 18px;
+line-height: 22px;
+display: flex;
+align-items: center;
+letter-spacing: 0.15em;
+font-family: 'Gilroy Black';
+text-transform: uppercase;
+}
+
+searchResults collapsedPanel panelHeader panelTitle .button.mini,
+searchResults collapsedPanel panelHeader panelTitle button.mini {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px
+}
+
+searchResults collapsedPanel panelHeader panelTitle .button.iconed.activated icon,
+searchResults collapsedPanel panelHeader panelTitle button.iconed.activated icon {
+    width: 18px;
+    height: 18px;
+    line-height: 18px
+}
+
+searchResults collapsedPanel panelHeader panelControls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 10px;
+    line-height: 40px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #6e7780
+}
+
+searchResults collapsedPanel panelHeader panelControls icon {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    background-color: transparent;
+    color: #6e7780;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    top: 12px
+}
+
+searchResults collapsedPanel panelBody {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    clear: both;
+    position: relative
+}
+
+searchResults collapsedPanel panelBody panelIcon {
+    margin-right: 10px;
+    margin-bottom: 10px
+}
+
+searchResults collapsedPanel panelBody panelIcon:first-child,
+searchResults collapsedPanel panelBody panelIcon:nth-child(5n+1) {
+    margin-left: 10px
+}
+
+searchResults collapsedPanel panelBody panelTile {
+    margin-right: 9px
+}
+
+searchResults collapsedPanel panelBody item {
+    height: auto;
+    float: left;
+    width: 100%;
+    max-height: 40px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    font-weight: 700
+}
+
+searchResults collapsedPanel panelBody item:hover {
+    background-color: #1c262f
+}
+
+searchResults collapsedPanel panelBody item instrument {
+    width: 100%;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box
+}
+
+searchResults collapsedPanel panelBody item instrument textwrapper {
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    text-overflow: ellipsis;
+    color: #6e7780
+}
+
+searchResults collapsedPanel panelBody item instrument descr {
+    color: #6e7780;
+    font-style: italic;
+    margin-left: 5px;
+    display: inline;
+    vertical-align: middle
+}
+
+searchResults collapsedPanel panelBody item instrument descr>* {
+    display: inline
+}
+
+searchResults collapsedPanel panelBody item instrument exchange {
+    float: right;
+    font-size: 10px;
+    font-weight: 600;
+    color: #6e7780;
+    max-width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+searchResults collapsedPanel panelBody item .link {
+    clear: both;
+    float: left;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    text-decoration: underline
+}
+
+searchResults collapsedPanel panelBody item .link:hover {
+    text-decoration: none
+}
+
+searchResults collapsedPanel panelBody item panels {
+    float: left;
+    padding: 0 10px 20px;
+    box-sizing: border-box;
+    width: 100%
+}
+
+searchResults collapsedPanel panelBody item panels more {
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    color: #bac7d7;
+    position: relative;
+    top: 13px
+}
+
+searchResults collapsedPanel panelBody item panels more:hover {
+    background-color: #252e37;
+    color: #6edefa
+}
+
+searchResults collapsedPanel panelBody item panels more icon {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center
+}
+
+searchResults collapsedPanel panelBody item.open {
+    max-height: 500px;
+    background-color: #131e28
+}
+
+searchResults collapsedPanel panelBody item highlight {
+    color: #0782a0
+}
+
+searchResults collapsedPanel panelBody item name {
+    font-size: 14px;
+    font-weight: 700;
+    display: inline;
+    color: #fff
+}
+
+searchResults collapsedPanel panelBody item name>* {
+    display: block;
+    float: left
+}
+
+searchResults collapsedPanel.back panelHeader panelTitle {
+    padding-left: 10px;
+    position: relative
+}
+
+searchResults collapsedPanel.back panelHeader panelTitle:before {
+    content: "\e90c";
+    font-family: iconsFont !important;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    position: absolute;
+    left: -5px
+}
+
+searchResults collapsedPanel.open {
+    max-height: 1000px
+}
+
+searchResults collapsedPanel.open panelHeader panelControls icon {
+    transform: rotate(180deg)
+}
+.panel_analytics panelTitle {
+     background: -webkit-linear-gradient(left,rgba(71, 198, 236, 1), rgba(41, 77, 114, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.panel_trading panelTitle {
+     background: -webkit-linear-gradient(left,rgba(94, 205, 55, 1), rgba(86, 157, 31, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.panel_portfolio panelTitle {
+     background: -webkit-linear-gradient(left,rgba(234, 227, 61, 1), rgba(163, 134, 30, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.panel_informational panelTitle {
+     background: -webkit-linear-gradient(left,rgba(199, 68, 40, 1), rgba(157, 76, 31, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.panel_misc panelTitle {
+     background: -webkit-linear-gradient(left,rgba(219, 71, 178, 1), rgba(194, 46, 144, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+searchResults collapsedPanel panelHeader panelControls {
+    display: none;
+}

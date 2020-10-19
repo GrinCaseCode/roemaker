@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../../themes/default/css/core.css" />
+    <link rel="stylesheet" href="css/styleAccount.css" />
+    <script>var a;</script>
+</head>
+<body>
+  <panel class="mini autoHeight shadow" id="panel">
+    <!-- <panelHeader draggable="true">
+      <panelTitle id="window_title">
+        <panelTitleText id="window_title_text">My account</panelTitleText>
+      </panelTitle>
+      <panelControls>
+        <icon id="window_close" class="close"></icon>
+      </panelControls>
+    </panelHeader> -->
+
+    <panelBody>
+      <darkArea id="loggedIn_panel" class="none">
+        <accountName id="account_name">info@quantower.com</accountName>
+        <button id="manage_account:button">Manage</button>
+        <button id="logout:button" class="black">Logout</button>
+      </darkArea>
+      <darkArea id="loggedOut_panel" class="">
+        <accountName>Log in to use your extensions</accountName>
+        <button id="login:button">Login</button>
+        <button id="store:button" class="black">Store</button>
+      </darkArea>
+      <extensions id="licences_panel" class="none">
+        <extTitle>
+          <label>My extensions</label>
+          <fright><a id="store_link:value" class="link">Open store</a></fright>
+        </extTitle>
+        <extList id="extensions_list">
+          <ext template="extension_item">
+            <extName templateItem="name">Volume analysis package</extName>
+            <extDue templateItem="due">Till 14.05.2019</extDue>
+            <extGauge templateItem="rest_time_indicator" class="high">
+              <div templateItem="rest_time_indicator:progress_circle" class="progress-circle p95 over50">
+                <span templateItem="rest_time_indicator:value">995</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+            </extGauge>
+            <extControls>
+              <button templateItem="add_licence:button" class="black">+1 months</button>
+            </extControls>
+          </ext>
+          <ext template="extension_item" class="active" dummy>
+            <extName>Volume analysis package</extName>
+            <extDue>Till 14.05.2019</extDue>
+            <extGauge class="medium">
+              <div class="progress-circle p38">
+                <span>38</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+            </extGauge>
+            <extControls>
+              <button class="black">+1 months</button>
+            </extControls>
+          </ext>
+          <ext template="extension_item" dummy>
+            <extName>Volume analysis package</extName>
+            <extDue>Till 14.05.2019</extDue>
+            <extGauge class="low">
+              <div class="progress-circle p10">
+                <span>10</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+            </extGauge>
+            <extControls>
+              <button class="black">+1 months</button>
+            </extControls>
+          </ext>
+        </extList>
+      </extensions>
+    </panelBody>
+  </panel>
+</body>
+</html>

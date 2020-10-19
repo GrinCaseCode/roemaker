@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="../../themes/Default/css/core.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+
+		window.addEventListener('DOMContentLoaded', () => {
+			checkBorders();
+			marquee();
+		});
+		window.addEventListener('resize', () => {
+			checkBorders();
+			marquee();
+		});
+
+		//window.onresize = checkBorders;
+
+		function checkBorders() {
+			var favConnectionsCount = document.getElementById("favoritesConnection").childNodes.length;
+
+			document.getElementById('connection_manager:button').classList.add("none");
+			document.getElementById('connections-list').classList.remove("none");
+
+			var leftRect = document.getElementById('left').getBoundingClientRect();
+			var rightRect = document.getElementById('right').getBoundingClientRect();
+
+			if (favConnectionsCount === 0 || leftRect.right >= rightRect.left || rightRect.left - leftRect.right < 50) {
+
+				document.getElementById('connection_manager:button').classList.remove("none");
+				document.getElementById('connections-list').classList.add("none");
+			}
+		}
+
+		function marquee() {
+			var midBlock = document.getElementById('midBlock');
+			var container = document.getElementById('tape');
+			var containerIn = document.getElementById('tapeIn');
+			var tapeList = document.getElementById('tapeList');
+
+			if(tapeList.clientWidth > (container.clientWidth-10)) {
+				container.style.width = tapeList.clientWidth-2+"px";
+				containerIn.style.width = (tapeList.clientWidth+3)*2+"px";
+
+				//Check whether there is 1 clone of list
+				if (containerIn.childElementCount == 1) {
+					containerIn.appendChild(tapeList.cloneNode(true));
+				}
+
+				containerIn.classList.add("animate");
+			} else {
+				containerIn.classList.remove("animate");
+
+				//Check whether there is 1 clone of list
+				if (containerIn.childElementCount > 1) {
+					document.getElementById('tapeList').remove();
+				}
+				container.removeAttribute("style");
+				containerIn.removeAttribute("style");
+			}
+
+			//Check whether list is wider than middleArea
+			if (midBlock.clientWidth > tapeList.clientWidth){
+				container.removeAttribute("style");
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<startBar draggable id="startBar">
+		<fleft class="" id="left">
+			<logo id="quanTower-logo" class=""><!--class update if we need show green arrow -->
+				<div class="mainLogo"></div>
+				<div class="updateLabel" title="Upgrade available"></div>
+			</logo>
+			<!--<separ class=""></separ>-->
+ <!--
+			<searchField id="search_field">
+				<formitem>
+					<wrapper class="x2">
+						<input id="search_field:input" type="search" placeholder="Search">
+						<button>
+							<icon class="search"></icon>
+						</button>
+					</wrapper>
+				</formitem>
+			</searchField>
+			<!--<separ class=""></separ>-->
+
+			<favorites id="favoritesPlugins">
+				<!--
+					Список классов в для panelTile
+					Binds | Analytics |	Trading | Portfolio | Informational | Misc | Market
+				
+				<panelTile class="Binds" template="plugin_small">
+					<border>
+						<name templateItem="short_name">Cht</name>
+					</border>
+				</panelTile>
+				<panelTile class="Binds" template="plugin_small">
+					<border>
+						<name templateItem="short_name">WLi</name>
+					</border>
+				</panelTile>
+				-->
+				<panelTile class="Analytics" template="plugin_small">
+					<border>
+						<name templateItem="short_name">Cht</name>
+					</border>
+				</panelTile>
+				<panelTile class="Analytics" template="plugin_small">
+					<border>
+						<name templateItem="short_name">WLi</name>
+					</border>
+				</panelTile>
+			
+				<panelTile class="Trading" template="plugin_small">
+					<border>
+						<name templateItem="short_name">COE</name>
+					</border>
+				</panelTile>
+				<panelTile class="Trading" template="plugin_small">
+					<border>
+						<name templateItem="short_name">DOM</name>
+					</border>
+				</panelTile>
+				<panelTile class="Portfolio" template="plugin_small">
+					<border>
+						<name templateItem="short_name">Ord</name>
+					</border>
+				</panelTile>
+				<panelTile class="Portfolio" template="plugin_small">
+					<border>
+						<name templateItem="short_name">Trd</name>
+					</border>
+				</panelTile>
+				<panelTile class="Informational" template="plugin_small">
+					<border>
+						<name templateItem="short_name">Acc</name>
+					</border>
+				</panelTile>
+				<panelTile class="Informational" template="plugin_small">
+					<border>
+						<name templateItem="short_name">AO</name>
+					</border>
+				</panelTile>
+				<panelTile class="Misc" template="plugin_small">
+					<border>
+						<name templateItem="short_name">HEx</name>
+					</border>
+				</panelTile>
+				<panelTile class="Misc" template="plugin_small">
+					<border>
+						<name templateItem="short_name">MX</name>
+					</border>
+				</panelTile>
+				<!--<panelTile class="Markets" template="plugin_small">
+					<border>
+						<name templateItem="short_name">Cha</name>
+					</border>
+				</panelTile>
+
+				<hider class="">
+					<icon class="mini_burger"></icon>
+				</hider>
+-->
+			</favorites>
+		</fleft>
+		<!-- 
+		<middle id="midBlock" class="">
+			<div class="tickersTape" id="tape">
+				<div class="tapeInner" id="tapeIn">
+					<span class="" id="tapeList">
+						<div class="tickerItem">
+							<div class="tName">BTC/USD</div>
+							<div class="tChange green">+2,5%</div>
+							<div class="tPrice">10550.45</div>
+						</div>
+						<div class="tickerItem">
+							<div class="tName">ETH/USD</div>
+							<div class="tChange green">+1,1%</div>
+							<div class="tPrice">321,54</div>
+						</div>
+						<div class="tickerItem">
+							<div class="tName">EUR/USD</div>
+							<div class="tChange red">-1,0%</div>
+							<div class="tPrice">1,517741,51794</div>
+						</div>
+					</span>
+				</div>
+			</div>
+		</middle>
+	-->
+		<fright id="right">
+			<!-- <activeWorkspace id="active-workspace">
+				<workSpaces class="" template="workspace">
+
+					<lock><icon class="lock" templateItem="workspace-icon-lock"></icon></lock>
+					<name>
+
+						<text templateItem="workspace-name">Positions workspace</text>
+
+						<edit>
+							<formitem>
+								<input type="text" value="Positions workspace" templateItem="workspace-edit-name">
+							</formitem>
+						</edit>
+					</name>
+					<drop><icon class="dropDown" templateItem="workspace-icon-close"></icon></drop>
+				</workSpaces>
+			</activeWorkspace> -->
+
+            <controls class="">
+                <icon class="bell none" id="optimus_alerts:button"></icon>
+                <!--<separ></separ>-->
+                <icon class="lock close" id="lock_trading:button"></icon><!-- если торговля заблокирована - добавлять class "close" для иконки lock -->
+                <!--<separ></separ>-->
+                <icon class="workspaces" id="workspaces:button"></icon>
+                <!-- locked - класс который нужно добавлять что бы появлялся замочек на иконку workspaces что бы получилось вот так
+                <icon class="workspaces locked" id="workspaces:button"></icon>  -->
+                <!--<separ></separ>-->
+            </controls>
+
+			<connectionsHolder id="connections_holder">
+				<connections class="" id="connections-list">
+					<items id="favoritesConnection">
+
+						<!-- out убрать при добавлении и добавить при удалении :)-->
+
+						<item template="connection" class="out">
+							<name>
+								<status templateItem="status" class="disconnected"></status>
+								<span templateItem="name"></span>
+							</name>
+							<ping templateItem="ping_container">
+								<span class="disconnected" templateItem="ping_value">---</span>
+							</ping>
+						</item>
+						<item template="connection" dummy>
+							<name>
+								<status templateItem="status" class="disconnected connecting"></status>
+								<span templateItem="name">Binance</span>
+							</name>
+							<ping class="disconnected">
+								<span templateItem="ping">Connecting...</span>
+							</ping>
+						</item>
+						<item template="connection" dummy>
+							<name>
+								<status templateItem="status" class="active"></status>
+								<span templateItem="name">OKEx</span>
+							</name>
+							<ping>
+								<span templateItem="ping">999</span>
+							</ping>
+						</item>
+						<item template="connection" dummy>
+							<name>
+								<status templateItem="status" class="warning"></status>
+								<span templateItem="name">BitMEX</span>
+							</name>
+							<ping>
+								<span templateItem="ping">58</span>
+							</ping>
+						</item>
+						<item template="connection" dummy>
+							<name>
+								<status templateItem="status" class="error"></status>
+								<span templateItem="name">Poloniex</span>
+							</name>
+							<ping class="disconnected">
+								<span templateItem="ping">Error</span>
+							</ping>
+						</item>
+					</items>
+				</connections>
+
+				<controls>
+
+					<icon id="connection_manager:button" class="managerIcon none">
+						<icon class="manager"></icon>
+						<icon class="manager"></icon>
+					</icon>
+				</controls>
+
+			</connectionsHolder>
+
+			<controls>
+
+				<icon id="connection_manager:button" class="managerIcon none">
+					<icon class="manager"></icon>
+					<icon class="manager"></icon>
+				</icon>
+
+				<!--<separ></separ>-->
+
+				<!-- <icon id="bind_it" style="font-size: 20px;" class="powertoolBind"></icon> -->
+
+				<icon id="notification-center" class="notification"><numb id="notification-count">123</numb></icon>
+
+				<!--<separ></separ>-->
+
+				<icon id="general_settings" class="settings"></icon>
+
+				<!--<separ></separ>-->
+
+				<icon class="timezone" id="platform-time">
+					<currentTime class="" id="current-time">23:59:59</currentTime>
+					<timezone class="" id="selected-time-zone">UTC-07:00</timezone>
+				</icon>
+
+				<!-- add class=loggedIn if user is logged in -->
+				<icon id="user_manager:button" class="userAccount loggedIn"></icon>
+				<icon id="help_center" class="helpCenter"></icon>
+
+				<!--<separ></separ>-->
+
+				<miniControls>
+					<icon id="minimize" class="centerMinimize"></icon>
+					<icon id="closewindow" class="centerClose"></icon>
+				</miniControls>
+
+			</controls>
+		</fright>
+	</startBar>
+</body>
+</html>

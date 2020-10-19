@@ -1,0 +1,19 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+<path d="M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path d="M58 30C58 45.464 45.464 58 30 58V62C47.6731 62 62 47.6731 62 30H58ZM30 58C14.536 58 2 45.464 2 30H-2C-2 47.6731 12.3269 62 30 62V58ZM2 30C2 14.536 14.536 2 30 2V-2C12.3269 -2 -2 12.3269 -2 30H2ZM30 2C45.464 2 58 14.536 58 30H62C62 12.3269 47.6731 -2 30 -2V2Z" fill="white" fill-opacity="0.5"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="56" height="56">
+<mask id="mask2" maskUnits="userSpaceOnUse" x="2" y="2" width="56" height="56">
+<path d="M58 30C58 45.464 45.464 58 30 58C14.536 58 2 45.464 2 30C2 14.536 14.536 2 30 2C45.464 2 58 14.536 58 30Z" fill="white"/>
+</mask>
+<g mask="url(#mask2)">
+<path d="M56 30C56 44.3594 44.3594 56 30 56V60C46.5685 60 60 46.5685 60 30H56ZM30 56C15.6406 56 4 44.3594 4 30H0C0 46.5685 13.4315 60 30 60V56ZM4 30C4 15.6406 15.6406 4 30 4V0C13.4315 0 0 13.4315 0 30H4ZM30 4C44.3594 4 56 15.6406 56 30H60C60 13.4315 46.5685 0 30 0V4Z" fill="#6EDEFA"/>
+</g>
+</mask>
+<g mask="url(#mask1)">
+<path d="M30 -8H80V30H30V-8Z" fill="white"/>
+</g>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="19" height="5" viewBox="0 0 19 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>tochki</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-15795 -6299)">
+<g id="tochki">
+<use xlink:href="#path0_fill" transform="translate(15795 6299)" fill="#535C65"/>
+<use xlink:href="#path1_fill" transform="translate(15795 6299)" fill="#535C65"/>
+<use xlink:href="#path2_fill" transform="translate(15795 6299)" fill="#535C65"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 5 2.5C 5 3.88071 3.88071 5 2.5 5C 1.11929 5 0 3.88071 0 2.5C 0 1.11929 1.11929 0 2.5 0C 3.88071 0 5 1.11929 5 2.5Z"/>
+<path id="path1_fill" d="M 12 2.5C 12 3.88071 10.8807 5 9.5 5C 8.11929 5 7 3.88071 7 2.5C 7 1.11929 8.11929 0 9.5 0C 10.8807 0 12 1.11929 12 2.5Z"/>
+<path id="path2_fill" d="M 19 2.5C 19 3.88071 17.8807 5 16.5 5C 15.1193 5 14 3.88071 14 2.5C 14 1.11929 15.1193 0 16.5 0C 17.8807 0 19 1.11929 19 2.5Z"/>
+</defs>
+</svg>
