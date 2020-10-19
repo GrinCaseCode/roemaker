@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="css/core.css" />
+    <script>var a;</script>
+</head>
+<body>
+	
+	<panel class="fixedHeight">
+		<panelHeader>
+			<panelTitle>Controls</panelTitle>
+			<panelControls>
+				<icon id="window.minimize" class="minimize"></icon>
+                <icon id="window.fullScreen" class="fullScreen"></icon>
+				<icon id="window.close" class="close"></icon>
+			</panelControls>
+		</panelHeader>
+		<panelbody>
+
+			<toolbarWrapper class="">
+				<toolbar class="">
+
+	                <formitem id="account_lookup" class="horizontal">
+	                    <wrapper class="combobox lookup mini activetext x2">
+
+	                        <input id="account_lookup:value" type="text" value="CQG-88462662846L" />
+
+	                        <activeText>
+	                            <span id="account_lookup:value_text">CQG-88462662846L</span><small id="account_lookup:connection_name">Connection#1</small>
+	                        </activeText>
+
+	                        <combo id="account_lookup:combo"></combo>
+
+	                    </wrapper>
+
+	                </formitem>
+
+                   	<button id="" class="mini iconed bordered">
+                        <icon class="lookap1"></icon>
+                    </button>
+					
+
+					<fright class="">
+						<button id="" class="mini iconed bordered nmr">
+	                        <icon class="search"></icon>
+	                    </button>
+					</fright>
+				</toolbar>
+			</toolbarWrapper>
+
+			<row>
+
+				<rowTitle>
+					Selects
+				</rowTitle>
+
+				<formitem>
+					<label for="">Mini Select</label>
+					<wrapper class="x2">
+						<selectfield class="mini">
+							Select - default
+						</selectfield>
+					</wrapper>
+				</formitem>
+
+				<formitem>
+					<label for="">Select</label>
+					<wrapper class="x2">
+						<selectfield class="disabled">
+							Select - disabled
+						</selectfield>
+					</wrapper>
+
+				</formitem>
+				<formitem>		
+					<wrapper class="x2">		
+						<selectfield>
+							Select - default
+						</selectfield>
+					</wrapper>
+
+				</formitem>
+				<formitem>		
+					<wrapper class="x2">			
+						<selectfield class="active">
+							Select - active
+						</selectfield>
+					</wrapper>
+				</formitem>
+				<formitem>
+					<selectElements>
+						<element>
+							Select item
+						</element>
+						<element class="active">
+							Select item active
+						</element>
+						<element class="disabled">
+							Select item disabled
+						</element>
+					</selectElements>						
+				</formitem>
+
+			</row>
+
+			<row>
+
+				<rowTitle>
+					Checkboxes
+				</rowTitle>
+
+				<formitem>
+					<input type="checkbox" class="withText" id="checkbox1" />
+					<label for="checkbox1">
+						Text
+					</label>
+				</formitem>
+
+				<formitem>
+					<input type="checkbox"  id="checkbox2" />
+					<label for="checkbox2"></label>
+				</formitem>
+
+				<formitem>
+					<input type="checkbox" checked="" disabled class="withText" id="checkbox3" />
+					<label for="checkbox3">
+						Text
+					</label>
+				</formitem>
+			
+				<formitem>
+					<input type="checkbox" class="switcher" checked="" id="checkbox4" />
+					<label for="checkbox4"></label>
+				</formitem>
+
+			</row>
+
+			<row>
+				
+				<rowTitle>
+					Radio
+				</rowTitle>
+
+				<formitem>
+
+					<input type="radio" name="radio" class="withText" id="radio1" />
+					<label for="radio1">
+						Text
+					</label>
+					
+				</formitem>
+
+				<formitem>
+
+					<input type="radio" name="radio" id="radio2" />
+					<label for="radio2"></label>
+					
+				</formitem>
+
+				<formitem>
+
+					<input type="radio" name="radio" checked="" disabled class="withText" id="radio3" />
+					<label for="radio3">
+						Text
+					</label>
+					
+				</formitem>
+		
+				<formitem>
+					<comboradio>
+						<input type="radio" name="awesomeName" id="radio4" checked="" />
+						<label for="radio4"><text>DEMO</text></label>
+						<input type="radio" name="awesomeName" id="radio5" />
+						<label for="radio5"><text>REAL</text></label>
+					</comboradio>
+				</formitem>
+
+			</row>
+
+			<row>				
+				
+				<rowTitle>
+					Separator
+				</rowTitle>
+
+				<separator></separator>
+
+			</row>
+
+			<row>		
+				
+				<rowTitle>
+					Horizontal form, comboradio
+				</rowTitle>	
+		
+				<formitem class="horizontal">
+					<label for="">Type</label>
+
+					<fright>
+						<wrapper>
+							<comboradio>
+								<input type="radio" name="awesomeName1" id="radio6" checked="" />
+								<label for="radio6"><text>DEMO</text></label>
+								<input type="radio" name="awesomeName1" id="radio7" />
+								<label for="radio7"><text>REAL</text></label>
+							</comboradio>
+						</wrapper>
+					</fright>
+				</formitem>
+
+			</row>
+
+			<row>
+				
+				<rowTitle>
+					Inputs
+				</rowTitle>
+		
+				<formitem class="horizontal">
+					<label for="">Combobox</label>
+
+					<fright>
+
+						<wrapper class="combobox x2">
+ 
+							<input type="text" value="Lorem ipsum dolor sit amet"/>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">Numeric Combobox</label>
+
+					<fright>
+
+						<wrapper class="combobox numeric">
+ 
+							<input type="number" value="33"/>
+
+							<numericControls>
+								<top></top>
+								<bottom></bottom>
+							</numericControls>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">Numeric</label>
+
+					<fright>
+						
+						<wrapper class="numeric oneHalf">
+	 
+							<input type="number" value="33" class="numeric" />
+
+							<numericControls>
+								<top></top>
+								<bottom></bottom>
+							</numericControls>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">Lookup</label>
+
+					<fright> 
+
+						<wrapper class="combobox lookup x2">
+ 
+							<input type="text" value="Lorem"/>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">Datepicker</label>
+
+					<fright> 
+
+						<wrapper class="combobox datepicker x2">
+ 
+							<input type="text" value="Lorem"/>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">status lookup</label>
+
+					<fright> 
+
+						<wrapper class="combobox lookup status">
+ 
+							<input type="text" value="Lorem"/>
+
+							<status title="Loading insrument data">
+								<icon class="settings"></icon>
+							</status>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">status</label>
+
+					<fright> 
+
+						<wrapper class="status">
+ 
+							<input type="text" value="Lorem"/>
+
+							<status title="Loading insrument data">
+								<icon class="settings"></icon>
+							</status>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+				<formitem class="horizontal">
+					<label for="">status lookup</label>
+
+					<fright>
+
+						<wrapper class="combobox lookup status activetext x2">
+ 
+							<input type="text" value="EUR/USD"/>
+
+							<activeText>
+								EUR/USD <small>NYSE</small>
+							</activeText>
+
+							<status title="Loading insrument data">
+								<icon class="settings"></icon>
+							</status>
+							
+							<combo></combo>
+							
+						</wrapper>
+
+					</fright>
+				</formitem>
+		
+			</row>
+
+			<row>
+				
+				<rowTitle>
+					Table
+				</rowTitle>           
+
+	            <table>
+	                <thead>
+	                    <tr>
+	                        <th>Header</th>
+	                        <th>Side</th>
+	                        <th>Quantity</th>
+	                        <th>Open price</th>
+	                        <th>Gross P/L</th>
+	                        <th>Fee</th>
+	                        <th>Account</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td>EUR/USD</td>
+	                        <td>Long</td>
+	                        <td>1</td>
+	                        <td>1,66352</td>
+	                        <td class="yellow">- 1 172.00 USD</td>
+	                        <td>-1,00</td>
+	                        <td>DEMO-9979</td>
+	                    </tr>
+	                    <tr class="selected">
+	                        <td>EUR/USD</td>
+	                        <td class="red">Short</td>
+	                        <td>-1521</td>
+	                        <td>1.66563</td>
+	                        <td class="green">72.04 USD</td>
+	                        <td>-1.00</td>
+	                        <td>DEMO-9978</td> 
+	                    </tr>
+	                    <tr class="group open">
+	                    	<td colspan="7">
+	                    		<groupName>
+	                    			Groupped items
+	                    		</groupName>
+	                    	</td>
+	                    </tr>
+	                    <tr>
+	                        <td>GBP/TOPOL</td>
+	                        <td class="red">Short</td>
+	                        <td>-1</td>
+	                        <td>1.66563</td>
+	                        <td>72.04 USD</td>
+	                        <td>-1.00</td>
+	                        <td>DEMO-9975</td> 
+	                    </tr>
+	                    <tr>
+	                        <td>GBP/TOPOL</td>
+	                        <td>Long</td>
+	                        <td>662</td>
+	                        <td>3301</td>
+	                        <td>- 1 172.00 USD</td>
+	                        <td>-1.00</td>
+	                        <td>DEMO-9972</td> 
+	                    </tr>
+	                    <tr class="group">
+	                    	<td colspan="7">
+	                    		<groupName>
+	                    			Groupped items
+	                    		</groupName>
+	                    	</td>
+	                    </tr>
+	                    <tr>
+	                        <td>GBP/TOPOL</td>
+	                        <td>Long</td>
+	                        <td>662</td>
+	                        <td>3301</td>
+	                        <td>- 1 172.00 USD</td>
+	                        <td>-1.00</td>
+	                        <td>DEMO-9972</td> 
+	                    </tr>
+	                </tbody>
+	            </table>
+
+			</row>
+
+		</panelbody>
+	</panel>
+
+</body>
+</html>
